@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Your app title -->
+    <title>My App</title>
+
+    <link rel="stylesheet" href="lib/framework7/css/framework7.md.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.md.colors.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+    
+</head>
+
+<body style="background: #aafc3f">
+    <div id="changeToScan" style="width: 100%; height: 100%;">
+
+        <div class="row no-gap">
+            <div class="col-15"></div>
+            <div class="col-70"><img class="col-100" src="img/logo.jpg" alt="logo home"></div>
+            <div class="col-15"></div>
+        </div>
+        <div style="font-family: CURSIVE;">
+            <h1 style="width: 100%; text-align: center; margin-top: -5%; font-size: 4em">Fast Order</h1>
+        </div>
+        <div class="row no-gap">
+            <div class="col-20"></div>
+            <div class="col-60"><img class="col-100" src="img/qrCode.jpg" alt="qrCode"></div>
+            <div class="col-20"></div>
+        </div>
+        <div style="width: 100%; text-align: center">
+            <p>chạm để bắt đầu</p>
+        </div>
+    
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+    <script type="text/javascript" src="js/routes.js"></script>
+    <script type="text/javascript">
+        $("#changeToScan").click(function  () {
+            router.navigate({ name: 'qrcode' });
+        });
+    </script>
+</body>
+
+</html>

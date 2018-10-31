@@ -1,0 +1,19 @@
+{
+  "name": "com.phonegap.thienlpn",
+  "version": "1.0.0",
+  "displayName": "ListView",
+  "cordova": {
+    "platforms": [
+      "browser"
+    ],
+    "plugins": {
+      "cordova-plugin-device": {},
+      "phonegap-plugin-barcodescanner": {}
+    }
+  },
+  "dependencies": {
+    "cordova-browser": "~5.0.4",
+    "cordova-plugin-device": "^2.0.2",
+    "phonegap-plugin-barcodescanner": "^8.0.0"
+  }
+}
