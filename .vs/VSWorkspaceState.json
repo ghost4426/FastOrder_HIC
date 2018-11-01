@@ -3,9 +3,8 @@
     "",
     "\\hooks",
     "\\www",
-    "\\www\\js",
-    "\\www\\lib\\framework7"
+    "\\www\\js"
   ],
-  "SelectedNode": "\\www\\js\\app.js",
+  "SelectedNode": "\\www\\index.html",
   "PreviewInSolutionExplorer": false
 }

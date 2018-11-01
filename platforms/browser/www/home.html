@@ -33,653 +33,801 @@
 </head>
 
 <body>
-  <div id="app">
+    <div id="app">
 
-    <!-- Status bar overlay for fullscreen mode-->
-    <div class="statusbar"></div>
-    <!-- Left panel with reveal effect when hidden -->
-    <div class="panel panel-left panel-reveal">
-      <div class="view view-left">
-        <div class="page">
-          <div class="navbar">
-            <div class="navbar-inner sliding">
-              <div class="title">Trúc Xinh</div>
-            </div>
-          </div>
-          <div class="page-content">
-            <div class="block-title">Wifi</div>
-            <div class="list links-list">
-              <ul>
-                <li>
-                  <div style="padding: 0px 42px 0px 16px; height: 36px;">Tên Wifi : Trucxinh</div>
-                </li>
-                <li>
-                  <div style="padding: 0px 42px 0px 16px; height: 36px; background-position: center;
-                  ">
-                    Password
-                    : 12345678
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="block-title">Categories</div>
-            <div class="list links-list">
-              <ul>
-                <li>
-                  <a href="/monnuong/" data-view=".view-main" class="panel-close">Món Nướng</a>
-                </li>
-                <li>
-                  <a href="/monchien/" data-view=".view-main" class="panel-close">Món chiên</a>
-                </li>
-                <li>
-                  <a href="/dohap/" data-view=".view-main" class="panel-close">Món hấp</a>
-                </li>
-                <li>
-                  <a href="/douong/" data-view=".view-main" class="panel-close">Đồ Uống</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Right panel with cover effect -->
-    <div class="panel panel-right panel-cover theme-dark">
-      <div class="view">
-        <div class="page">
-          <div class="navbar">
-            <div class="navbar-inner">
-              <div class="title">Đơn hàng</div>
-            </div>
-          </div>
-          <div class="page-content">
-            <div class="block">Right panel content goes here</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Your main view, should have "view-main" class -->
-    <div class="view view-main ios-edges">
-      <!-- Page, data-name contains page name which can be used in callbacks -->
-      <div class="page color-green " data-name="home">
-        <!-- Top Navbar -->
-        <div class="navbar ">
-          <div class="navbar-inner">
-
-            <div class="left">
-              <a href="#" class="link icon-only panel-open" data-panel="left">
-
-                <i class="fas fa-bars"></i>
-              </a>
-            </div>
-            <form data-search-in=".item-title" class="searchbar searchbar-init">
-              <div class="searchbar-inner">
-                <div class="searchbar-input-wrap">
-                  <input type="search" placeholder="Search" class=""><i class="searchbar-icon"></i><span class="input-clear-button"></span>
-                </div><span class="searchbar-disable-button">Cancel</span>
-              </div>
-            </form>
-            <div class="right">
-              <a href="#" class="link icon-only popup-open" data-panel="right" data-popup=".popup-shoppingCard">
-                <i class="icon material-icons md-only"><i class="fas fa-shopping-cart"></i><span id="numCart" class="badge color-red">0</span></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- Toolbar-->
-        <!-- <div class="toolbar">
-          <div class="toolbar-inner">
-            <a href="#" class="link">Left Link</a>
-            <form class="searchbar searchbar-expandable">
-                <div class="searchbar-inner">
-                  <div class="searchbar-input-wrap">
-                    <input type="search" placeholder="Search"/>
-                    <i class="searchbar-icon"></i>
-                    <span class="input-clear-button"></span>
-                  </div>
-                  <span class="searchbar-disable-button">Cancel</span>
-                </div>
-              </form>
-          </div>
-        </div> -->
-        <!-- Scrollable page content-->
-        <div class="page-content">
-          <div class="list searchbar-found">
-
-            <div class="block-title">Món Nướng</div>
-
-            <div class="list media-list">
-              <ul>
-                <li>
-                  <div class="item-content">
-                    <div class="item-media"><img src="img/thit3.jpg" width="100px" height="100px" /></div>
-                    <div class="item-inner">
-                      <div class="item-title-row">
-                        <div class="item-title" id="name">Ba rọi hầm tiêu</div>
-                      </div>
-
-                      <!-- Popover ghi chú -->
-                      <div class="item-subtitle" data-popup=".popup-note">
-                        <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
-                        <br>
-                        <small id="price">45000</small>
-                        <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
-                      </div>
-
-                      <div class="stepper stepper-fill stepper-init" style="width: 50%;">
-
-                        <div class="stepper-button-minus"></div>
-                        <div class="stepper-input-wrap">
-                          <input id="quantity" type="text" value="1" min="0" max="100" step="1" readonly>
+        <!-- Status bar overlay for fullscreen mode-->
+        <div class="statusbar"></div>
+        <!-- Left panel with reveal effect when hidden -->
+        <div class="panel panel-left panel-reveal">
+            <div class="view view-left">
+                <div class="page">
+                    <div class="navbar">
+                        <div class="navbar-inner sliding">
+                            <div class="title">Trúc Xinh</div>
                         </div>
-                        <div class="stepper-button-plus"></div>
-                      </div>
-                      <div class="item-subtitle">
-                        <button class="col button button-fill color-red" onclick="addItem()">Thêm món</button>
-                      </div>
                     </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="item-content">
-                    <div class="item-media"><img src="img/thit2.jpg" width="100px" height="100px" /></div>
-                    <div class="item-inner">
-                      <div class="item-title-row">
-                        <div class="item-title">Sườn non nướng</div>
-                      </div>
-                      <div class="item-subtitle" data-popup=".popup-note">
-                        <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
-                        <br>
-                        <small>45.000 vnđ</small>
-                        <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
+                    <div class="page-content">
+                        <div class="block-title">Wifi</div>
+                        <div class="list links-list">
+                            <ul>
+                                <li>
+                                    <div style="padding: 0px 42px 0px 16px; height: 36px;">Tên Wifi : Trucxinh</div>
+                                </li>
+                                <li>
+                                    <div style="padding: 0px 42px 0px 16px; height: 36px; background-position: center;
+                  ">
+                                        Password
+                                        : 12345678
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="block-title">Categories</div>
+                        <div class="list links-list">
 
-                      </div>
-                      <div class="item-subtitle">
+                            <ul>
+                                <li onclick="focusCategories()">
+                                    <a href="/monnuong/" data-view=".view-main">Món Nướng</a>
+                                </li>
 
-                        <button class="col button button-fill color-red">Thêm món</button>
-                      </div>
+                                <li>
+                                    <a href="/monchien/" data-view=".view-main" class="link popup-open" data-popup=".popup-monChien">
+                                        Món
+                                        chiên
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/dohap/" data-view=".view-main" class="link popup-open" data-popup=".popup-monHap">Món hấp</a>
+                                </li>
+                                <li>
+                                    <a href="/douong/" data-view=".view-main" class="link popup-open" data-popup=".popup-doUong">Đồ Uống</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="item-content">
-                    <div class="item-media"><img src="img/thit4.jpg" width="100px" height="100px" /></div>
-                    <div class="item-inner">
-                      <div class="item-title-row">
-                        <div class="item-title">Bò nướng lu </div>
-                      </div>
-                      <div class="item-subtitle" data-popup=".popup-note">
-                        <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
-                        <br>
-                        <small>45.000 vnđ</small>
-                        <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
-                      </div>
-                      <div class="item-subtitle">
-
-                        <button class="col button button-fill color-red">Thêm món</button>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="item-content">
-                    <div class="item-media"><img src="img/garan.jpg" width="100px" height="100px" /></div>
-                    <div class="item-inner">
-                      <div class="item-title-row">
-                        <div class="item-title">Gà cay phô mai</div>
-                      </div>
-                      <div class="item-subtitle" data-popup=".popup-note">
-                        <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
-                        <br>
-                        <small>45.000 vnđ</small>
-                        <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
-                      </div>
-                      <div class="item-subtitle">
-
-                        <button class="col button button-fill color-red">Thêm món</button>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
+                </div>
             </div>
-
-            <div class="block-title">Món Chiên</div>
-
-            <div class="list media-list">
-              <ul>
-                <li>
-                  <div class="item-content">
-                    <div class="item-media"><img src="img/cachien.jpg" width="100px" height="100px" /></div>
-                    <div class="item-inner">
-                      <div class="item-title-row">
-                        <div class="item-title">Cá tai tượng chiên xù</div>
-                      </div>
-                      <!-- Popover ghi chú -->
-                      <div class="item-subtitle" data-popup=".popup-note">
-                        <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
-                        <br>
-                        <small>45.000 vnđ</small>
-                        <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
-                      </div>
-                      <div class="item-subtitle">
-
-                        <button class="col button button-fill color-red">Thêm món</button>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="item-content">
-                    <div class="item-media"><img src="img/mi gion.jpg" width="100px" height="100px" /></div>
-                    <div class="item-inner">
-                      <div class="item-title-row">
-                        <div class="item-title">Mì xào giòn</div>
-                      </div>
-                      <div class="item-subtitle" data-popup=".popup-note">
-                        <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
-                        <br>
-                        <small>45.000 vnđ</small>
-                        <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
-                      </div>
-                      <div class="item-subtitle">
-
-                        <button class="col button button-fill color-red">Thêm món</button>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="item-content">
-                    <div class="item-media"><img src="img/banhkhot.jpg" width="100px" height="100px" /></div>
-                    <div class="item-inner">
-                      <div class="item-title-row">
-                        <div class="item-title">Bánh khọt</div>
-                      </div>
-                      <div class="item-subtitle" data-popup=".popup-note">
-                        <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
-                        <br>
-                        <small>45.000 vnđ</small>
-                        <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
-                      </div>
-                      <div class="item-subtitle">
-
-                        <button class="col button button-fill color-red">Thêm món</button>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="item-content">
-                    <div class="item-media"><img src="img/pizzachien.jpg" width="100px" height="100px" /></div>
-                    <div class="item-inner">
-                      <div class="item-title-row">
-                        <div class="item-title">Pizza chiên</div>
-                      </div>
-                      <div class="item-subtitle" data-popup=".popup-note">
-                        <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
-                        <br>
-                        <small>45.000 vnđ</small>
-                        <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
-                      </div>
-                      <div class="item-subtitle">
-
-                        <button class="col button button-fill color-red">Thêm món</button>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            <div class="block-title">Món Hấp</div>
-
-            <div class="list media-list">
-              <ul>
-                <li>
-                  <div class="item-content">
-                    <div class="item-media"><img src="img/khoqua.jpg" width="100px" height="100px" /></div>
-                    <div class="item-inner">
-                      <div class="item-title-row">
-                        <div class="item-title">Khổ qua nhồi thịt</div>
-                      </div>
-                      <!-- Popover ghi chú -->
-                      <div class="item-subtitle" data-popup=".popup-note">
-                        <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
-                        <br>
-                        <small>45.000 vnđ</small>
-                        <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
-                      </div>
-                      <div class="item-subtitle">
-
-                        <button class="col button button-fill color-red">Thêm món</button>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="item-content">
-                    <div class="item-media"><img src="img/gahaphanh.jpg" width="100px" height="100px" /></div>
-                    <div class="item-inner">
-                      <div class="item-title-row">
-                        <div class="item-title">Gà hấp hành</div>
-                      </div>
-                      <div class="item-subtitle" data-popup=".popup-note">
-                        <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
-                        <br>
-                        <small>45.000 vnđ</small>
-                        <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
-                      </div>
-                      <div class="item-subtitle">
-
-                        <button class="col button button-fill color-red">Thêm món</button>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="item-content">
-                    <div class="item-media"><img src="img/ngheuhap.jpg" width="100px" height="100px" /></div>
-                    <div class="item-inner">
-                      <div class="item-title-row">
-                        <div class="item-title">Nghêu hấp xả ớt</div>
-                      </div>
-                      <div class="item-subtitle" data-popup=".popup-note">
-                        <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
-                        <br>
-                        <small>45.000 vnđ</small>
-                        <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
-                      </div>
-                      <div class="item-subtitle">
-
-                        <button class="col button button-fill color-red">Thêm món</button>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="item-content">
-                    <div class="item-media"><img src="img/tomhap.jpg" width="100px" height="100px" /></div>
-                    <div class="item-inner">
-                      <div class="item-title-row">
-                        <div class="item-title">Tôm Hấp</div>
-                      </div>
-                      <div class="item-subtitle" data-popup=".popup-note">
-                        <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
-                        <br>
-                        <small>45.000 vnđ</small>
-                        <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
-                      </div>
-                      <div class="item-subtitle">
-
-                        <button class="col button button-fill color-red">Thêm món</button>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="item-content">
-                    <div class="item-media"><img src="img/canhraucu.jpg" width="100px" height="100px" /></div>
-                    <div class="item-inner">
-                      <div class="item-title-row">
-                        <div class="item-title">Canh rau củ</div>
-                      </div>
-                      <div class="item-subtitle" data-popup=".popup-note">
-                        <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
-                        <br>
-                        <small>45.000 vnđ</small>
-                        <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
-                      </div>
-                      <div class="item-subtitle">
-
-                        <button class="col button button-fill color-red">Thêm món</button>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            <div class="block-title">Đồ Uống</div>
-
-            <div class="list media-list">
-              <ul>
-                <li>
-                  <div class="item-content">
-                    <div class="item-media"><img src="img/nuoccam.jpg" width="100px" height="100px" /></div>
-                    <div class="item-inner">
-                      <div class="item-title-row">
-                        <div class="item-title">Nước cam</div>
-                      </div>
-                      <!-- Popover ghi chú -->
-                      <div class="item-subtitle" data-popup=".popup-note">
-                        <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
-                        <br>
-                        <small>45.000 vnđ</small>
-                        <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
-                      </div>
-                      <div class="item-subtitle">
-
-                        <button class="col button button-fill color-red">Thêm món</button>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="item-content">
-                    <div class="item-media"><img src="img/coca.jpg" width="100px" height="100px" /></div>
-                    <div class="item-inner">
-                      <div class="item-title-row">
-                        <div class="item-title">Coca Cola</div>
-                      </div>
-                      <div class="item-subtitle" data-popup=".popup-note">
-                        <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
-                        <br>
-                        <small>45.000 vnđ</small>
-                        <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
-                      </div>
-                      <div class="item-subtitle">
-
-                        <button class="col button button-fill color-red">Thêm món</button>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="item-content">
-                    <div class="item-media"><img src="img/tragung.jpg" width="100px" height="100px" /></div>
-                    <div class="item-inner">
-                      <div class="item-title-row">
-                        <div class="item-title">Trà gừng </div>
-                      </div>
-                      <div class="item-subtitle" data-popup=".popup-note">
-                        <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
-                        <br>
-                        <small>45.000 vnđ</small>
-                        <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
-                      </div>
-                      <div class="item-subtitle">
-
-                        <button class="col button button-fill color-red">Thêm món</button>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="item-content">
-                    <div class="item-media"><img src="img/trachanh.jpg" width="100px" height="100px" /></div>
-                    <div class="item-inner">
-                      <div class="item-title-row">
-                        <div class="item-title">Trà chanh</div>
-                      </div>
-                      <div class="item-subtitle" data-popup=".popup-note">
-                        <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
-                        <br>
-                        <small>45.000 vnđ</small>
-                        <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
-                      </div>
-                      <div class="item-subtitle">
-
-                        <button class="col button button-fill color-red">Thêm món</button>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="item-content">
-                    <div class="item-media"><img src="img/suadaunanh.jpg" width="100px" height="100px" /></div>
-                    <div class="item-inner">
-                      <div class="item-title-row">
-                        <div class="item-title">Sữa đậu nành</div>
-                      </div>
-                      <div class="item-subtitle" data-popup=".popup-note">
-                        <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
-                        <br>
-                        <small>45.000 vnđ</small>
-                        <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
-                      </div>
-                      <div class="item-subtitle">
-
-                        <button class="col button button-fill color-red">Thêm món</button>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="item-content">
-                    <div class="item-media"><img src="img/pepsi.jpg" width="100px" height="100px" /></div>
-                    <div class="item-inner">
-                      <div class="item-title-row">
-                        <div class="item-title">Pepsi</div>
-                      </div>
-                      <div class="item-subtitle" data-popup=".popup-note">
-                        <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
-                        <br>
-                        <small>45.000 vnđ</small>
-                        <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
-                      </div>
-                      <div class="item-subtitle">
-
-                        <button class="col button button-fill color-red">Thêm món</button>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
-            </div>
-          </div>
-          <div class="block searchbar-not-found">
-            <div class="block-inner">Nothing found</div>
-          </div>
         </div>
-      </div>
-    </div>
-
-    <!-- Popup -->
-
-
-  </div>
-
-
-  <div class="popover popover-note" style="width: 100%;margin-left: -8px">
-    <div class="popover-inner">
-      <div class="block">
-        <p>Ghi chú thêm cho món ăn</p>
-        <p>
-          <div class="item-inner">
-
-            <div class="item-input-wrap">
-              <textarea class="resizable" placeholder="Ghi Chú" style="width: 100%; min-height:20mm;max-height: 20mm;box-sizing: inherit;"></textarea>
-              <span class="input-clear-button"></span>
+        <!-- Right panel with cover effect -->
+        <div class="panel panel-right panel-cover theme-dark">
+            <div class="view">
+                <div class="page">
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <div class="title">Đơn hàng</div>
+                        </div>
+                    </div>
+                    <div class="page-content">
+                        <div class="block">Right panel content goes here</div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </p>
-        <p>
-          <button class="col button button-fill color-blue">OK</button>
-        </p>
-      </div>
+        </div>
+
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main ios-edges">
+            <!-- Page, data-name contains page name which can be used in callbacks -->
+            <div class="page color-green " data-name="home">
+                <!-- Top Navbar -->
+                <div class="navbar ">
+                    <div class="navbar-inner">
+
+                        <div class="left">
+                            <a href="#" class="link icon-only panel-open" data-panel="left">
+
+                                <i class="fas fa-bars"></i>
+                            </a>
+                        </div>
+                        <form data-search-in=".item-title" class="searchbar searchbar-init">
+                            <div class="searchbar-inner">
+                                <div class="searchbar-input-wrap">
+                                    <input type="search" placeholder="Search"><i class="searchbar-icon"></i><span class="input-clear-button"></span>
+                                </div><span class="searchbar-disable-button">Cancel</span>
+                            </div>
+                        </form>
+                        <div class="right">
+                            <a href="#" class="link icon-only popup-open" data-panel="right" data-popup=".popup-shoppingCard">
+                                <i class="icon material-icons md-only"><i class="fas fa-shopping-cart"></i><span id="numCart" class="badge color-red">0</span></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Toolbar-->
+                <!-- <div class="toolbar">
+                  <div class="toolbar-inner">
+                    <a href="#" class="link">Left Link</a>
+                    <form class="searchbar searchbar-expandable">
+                        <div class="searchbar-inner">
+                          <div class="searchbar-input-wrap">
+                            <input type="search" placeholder="Search"/>
+                            <i class="searchbar-icon"></i>
+                            <span class="input-clear-button"></span>
+                          </div>
+                          <span class="searchbar-disable-button">Cancel</span>
+                        </div>
+                      </form>
+                  </div>
+                </div> -->
+                <!-- Scrollable page content-->
+                <div class="page-content">
+                    <div class="list searchbar-found">
+
+                        <div class="block-title">Món Nướng</div>
+
+                        <div class="list media-list">
+                            <ul>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-media"><img src="img/thit3.jpg" width="100px" height="100px" /></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title" id="name">Ba rọi hầm tiêu</div>
+                                            </div>
+
+                                            <!-- Popover ghi chú -->
+                                            <div class="item-subtitle" data-popup=".popup-note">
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <br>
+                                                <small id="price">45000</small>
+                                                <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
+                                            </div>
+
+
+
+                                            <div class="item-subtitle">
+                                                <button class="col button button-fill color-red open-toast-bottom" onclick="addItem('img/thit3.jpg','Ba rọi hầm tiêu',45000)">
+                                                    Thêm
+                                                    món
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-media"><img src="img/thit2.jpg" width="100px" height="100px" /></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title" id="name1">Sườn non nướng</div>
+                                            </div>
+                                            <div class="item-subtitle" data-popup=".popup-note">
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <br>
+                                                <small>45.000 vnđ</small>
+                                                <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
+
+                                            </div>
+
+
+                                            <div class="item-subtitle">
+
+                                                <button class="col button button-fill color-red open-toast-bottom">Thêm món</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-media"><img src="img/thit4.jpg" width="100px" height="100px" /></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">Bò nướng lu </div>
+                                            </div>
+                                            <div class="item-subtitle" data-popup=".popup-note">
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <br>
+                                                <small>45.000 vnđ</small>
+                                                <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
+                                            </div>
+
+
+                                            <div class="item-subtitle">
+
+                                                <button class="col button button-fill color-red">Thêm món</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-media"><img src="img/garan.jpg" width="100px" height="100px" /></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">Gà cay phô mai</div>
+                                            </div>
+                                            <div class="item-subtitle" data-popup=".popup-note">
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <br>
+                                                <small>45.000 vnđ</small>
+                                                <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
+                                            </div>
+                                            <div class="item-subtitle">
+
+                                                <button class="col button button-fill color-red">Thêm món</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="block-title">Món Chiên</div>
+
+                        <div class="list media-list">
+                            <ul>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-media"><img src="img/cachien.jpg" width="100px" height="100px" /></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">Cá tai tượng chiên xù</div>
+                                            </div>
+                                            <!-- Popover ghi chú -->
+                                            <div class="item-subtitle" data-popup=".popup-note">
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <br>
+                                                <small>45.000 vnđ</small>
+                                                <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
+                                            </div>
+                                            <div class="item-subtitle">
+
+                                                <button class="col button button-fill color-red">Thêm món</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-media"><img src="img/mi gion.jpg" width="100px" height="100px" /></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">Mì xào giòn</div>
+                                            </div>
+                                            <div class="item-subtitle" data-popup=".popup-note">
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <br>
+                                                <small>45.000 vnđ</small>
+                                                <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
+                                            </div>
+                                            <div class="item-subtitle">
+
+                                                <button class="col button button-fill color-red">Thêm món</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-media"><img src="img/banhkhot.jpg" width="100px" height="100px" /></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">Bánh khọt</div>
+                                            </div>
+                                            <div class="item-subtitle" data-popup=".popup-note">
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <br>
+                                                <small>45.000 vnđ</small>
+                                                <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
+                                            </div>
+                                            <div class="item-subtitle">
+
+                                                <button class="col button button-fill color-red">Thêm món</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-media"><img src="img/pizzachien.jpg" width="100px" height="100px" /></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">Pizza chiên</div>
+                                            </div>
+                                            <div class="item-subtitle" data-popup=".popup-note">
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <br>
+                                                <small>45.000 vnđ</small>
+                                                <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
+                                            </div>
+                                            <div class="item-subtitle">
+
+                                                <button class="col button button-fill color-red">Thêm món</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="block-title">Món Hấp</div>
+
+                        <div class="list media-list">
+                            <ul>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-media"><img src="img/khoqua.jpg" width="100px" height="100px" /></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">Khổ qua nhồi thịt</div>
+                                            </div>
+                                            <!-- Popover ghi chú -->
+                                            <div class="item-subtitle" data-popup=".popup-note">
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <br>
+                                                <small>45.000 vnđ</small>
+                                                <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
+                                            </div>
+                                            <div class="item-subtitle">
+
+                                                <button class="col button button-fill color-red">Thêm món</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-media"><img src="img/gahaphanh.jpg" width="100px" height="100px" /></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">Gà hấp hành</div>
+                                            </div>
+                                            <div class="item-subtitle" data-popup=".popup-note">
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <br>
+                                                <small>45.000 vnđ</small>
+                                                <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
+                                            </div>
+                                            <div class="item-subtitle">
+
+                                                <button class="col button button-fill color-red">Thêm món</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-media"><img src="img/ngheuhap.jpg" width="100px" height="100px" /></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">Nghêu hấp xả ớt</div>
+                                            </div>
+                                            <div class="item-subtitle" data-popup=".popup-note">
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <br>
+                                                <small>45.000 vnđ</small>
+                                                <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
+                                            </div>
+                                            <div class="item-subtitle">
+
+                                                <button class="col button button-fill color-red">Thêm món</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-media"><img src="img/tomhap.jpg" width="100px" height="100px" /></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">Tôm Hấp</div>
+                                            </div>
+                                            <div class="item-subtitle" data-popup=".popup-note">
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <br>
+                                                <small>45.000 vnđ</small>
+                                                <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
+                                            </div>
+                                            <div class="item-subtitle">
+
+                                                <button class="col button button-fill color-red">Thêm món</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-media"><img src="img/canhraucu.jpg" width="100px" height="100px" /></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">Canh rau củ</div>
+                                            </div>
+                                            <div class="item-subtitle" data-popup=".popup-note">
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <br>
+                                                <small>45.000 vnđ</small>
+                                                <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
+                                            </div>
+                                            <div class="item-subtitle">
+
+                                                <button class="col button button-fill color-red">Thêm món</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="block-title">Đồ Uống</div>
+
+                        <div class="list media-list">
+                            <ul>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-media"><img src="img/nuoccam.jpg" width="100px" height="100px" /></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">Nước cam</div>
+                                            </div>
+                                            <!-- Popover ghi chú -->
+                                            <div class="item-subtitle" data-popup=".popup-note">
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <br>
+                                                <small>45.000 vnđ</small>
+                                                <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
+                                            </div>
+
+
+                                            <div class="item-subtitle">
+
+                                                <button class="col button button-fill color-red" id="monNuong">Thêm món</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-media"><img src="img/coca.jpg" width="100px" height="100px" /></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">Coca Cola</div>
+                                            </div>
+                                            <div class="item-subtitle" data-popup=".popup-note">
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <br>
+                                                <small>45.000 vnđ</small>
+                                                <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
+                                            </div>
+                                            <div class="item-subtitle">
+
+                                                <button class="col button button-fill color-red">Thêm món</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-media"><img src="img/tragung.jpg" width="100px" height="100px" /></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">Trà gừng </div>
+                                            </div>
+                                            <div class="item-subtitle" data-popup=".popup-note">
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <br>
+                                                <small>45.000 vnđ</small>
+                                                <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
+                                            </div>
+                                            <div class="item-subtitle">
+
+                                                <button class="col button button-fill color-red">Thêm món</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-media"><img src="img/trachanh.jpg" width="100px" height="100px" /></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">Trà chanh</div>
+                                            </div>
+                                            <div class="item-subtitle" data-popup=".popup-note">
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <br>
+                                                <small>45.000 vnđ</small>
+                                                <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
+                                            </div>
+                                            <div class="item-subtitle">
+
+                                                <button class="col button button-fill color-red">Thêm món</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-media"><img src="img/suadaunanh.jpg" width="100px" height="100px" /></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">Sữa đậu nành</div>
+                                            </div>
+                                            <div class="item-subtitle" data-popup=".popup-note">
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <br>
+                                                <small>45.000 vnđ</small>
+                                                <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
+                                            </div>
+                                            <div class="item-subtitle">
+
+                                                <button class="col button button-fill color-red">Thêm món</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-media"><img src="img/pepsi.jpg" width="100px" height="100px" /></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">Pepsi</div>
+                                            </div>
+                                            <div class="item-subtitle" data-popup=".popup-note">
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <br>
+                                                <small>45.000 vnđ</small>
+                                                <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
+                                            </div>
+                                            <div class="item-subtitle">
+
+                                                <button class="col button button-fill color-red">Thêm món</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="block searchbar-not-found">
+                        <div class="block-inner">Nothing found</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popup -->
+
+
     </div>
-  </div>
 
-  <div class="popup popup-shoppingCard">
-    <div class="navbar">
-      <div class="navbar-inner">
-        <div class="title">Cart</div>
-        <div class="right"><a href="#" class="link popup-close"><i class="fas fa-times-circle"></i></a></div>
-      </div>
+
+    <div class="popover popover-note" style="width: 100%;margin-left: -8px">
+        <div class="popover-inner">
+            <div class="block">
+                <p>Ghi chú thêm cho món ăn</p>
+                <p>
+                    <div class="item-inner">
+
+                        <div class="item-input-wrap">
+                            <textarea class="resizable" placeholder="Ghi Chú" style="width: 100%; min-height:20mm;max-height: 20mm;box-sizing: inherit;"></textarea>
+                            <span class="input-clear-button"></span>
+                        </div>
+                    </div>
+                </p>
+                <p>
+                    <button class="col button button-fill color-blue">OK</button>
+                </p>
+            </div>
+        </div>
     </div>
-    <div class="block">
-      <div class="list media-list" id="cart">
+    <!-- popup -->
+    <div class="popup popup-shoppingCard">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="title">Cart</div>
+                <div class="right"><a href="#" class="link popup-close"><i class="fas fa-times-circle"></i></a></div>
+            </div>
+            <div>
+
+            </div>
+        </div>
+        <div class="block">
+
+            <div class="list media-list" id="cart">
+
+            </div>
 
 
-      </div>
+        </div>
     </div>
-  </div>
 
-  <div class="fab fab-center-bottom fab-extended color-red">
-    <a class="">
-      <i class="icon f7-icons">add</i>
-      <div class="fab-text">Create</div>
-    </a>
-  </div>
+    <div class="popup popup-monNuong">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="title">Món Nướng</div>
+                <div class="right"><a href="#" class="link popup-close"><i class="fas fa-times-circle"></i></a></div>
+            </div>
+            <div>
 
-  <!-- Cordova -->
-  <!--
-  <script src="cordova.js"></script>
-  -->
-  <!-- Framework7 library -->
-  <script>
-    iname = [];
-    iquantity = [];
-    iprice = [];
-    function addItem() {
-      iname.push(document.getElementById('name').innerHTML);
-      iquantity.push(parseInt(document.getElementById('quantity').value));
-      iprice.push(parseInt(document.getElementById('price').innerHTML));
-      displayCart();
-    }
+            </div>
+        </div>
+        <div class="block">
 
-    function displayCart() {
-      cartdata = '<table class="upborder" border="1"><tr><th>Product Name</th><th>Quantity</th><th>Price</th><th>Total</th></tr>'
-      total = 0;
+            <div class="list media-list">
 
-      for (let i = 0; i < iname.length; i++) {
-
-        alert(iquantity[i]);
-        total += iquantity[i] * iprice[i];
-        cartdata += "<tr><td>" + iname[i] + "</td><td>" + iquantity[i] +
-          "</td><td>" + iprice[i] + "</td><td>" + iquantity[i] * iprice[i] +
-          "</td><td><button onclick='delElement(" + i + ")'><i class='fas fa-trash-alt'></i></button></td></tr>"
-      }
-
-      cartdata += '<tr><td></td><td></td><td></td><td>' + total + ' </td></tr></table'
-
-      document.getElementById('cart').innerHTML = cartdata
-      document.getElementById('numCart').innerHTML = iname.length
-
-    }
-
-    function delElement(a) {
-      iname.splice(a, 1)
-      iquantity.splice(a, 1)
-      iprice.splice(a, 1)
-      displayCart()
-    }
-
-  </script>
-
-  <script src="lib/framework7-3.4.3/packages/core/js/framework7.min.js"></script>
-  <script src="lib/framework7-3.4.3/packages/core/js/all.js"></script>
+            </div>
 
 
+        </div>
+    </div>
 
-  <!-- App routes -->
-  <script src="js/routes2.js"></script>
+    <div class="popup popup-monHap">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="title">Món Hấp</div>
+                <div class="right"><a href="#" class="link popup-close"><i class="fas fa-times-circle"></i></a></div>
+            </div>
+            <div>
 
-  <!-- Your custom app scripts -->
-  <script src="js/app2.js"></script>
+            </div>
+        </div>
+        <div class="block">
+
+            <div class="list media-list">
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="popup popup-monChien">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="title">Món Chiên</div>
+                <div class="right"><a href="#" class="link popup-close"><i class="fas fa-times-circle"></i></a></div>
+            </div>
+            <div>
+
+            </div>
+        </div>
+        <div class="block">
+
+            <div class="list media-list">
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="popup popup-doUong">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="title">Món Chiên</div>
+                <div class="right"><a href="#" class="link popup-close"><i class="fas fa-times-circle"></i></a></div>
+            </div>
+            <div>
+
+            </div>
+        </div>
+        <div class="block">
+
+            <div class="list media-list">
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <!-- Cordova -->
+    <!--
+    <script src="cordova.js"></script>
+    -->
+
+
+
+    <script>
+        iname = [];
+        iquantity = [];
+        iprice = [];
+        image = [];
+        sl = 1;
+
+
+        function addItem(a, b, d) {
+            for (let i = 0; i < iname.length; i++) {
+
+                if (iname[i] == b) {
+                    sl += 1;
+                    console.log(sl);
+                    iquantity[i] = sl;
+                    displayCart();
+                    return;
+                }
+
+            }
+
+            image.push(a);
+            iname.push(b);
+            iquantity.push(sl);
+            iprice.push(d);
+
+            displayCart();
+        }
+
+        function updateQuantitive() {
+            sl = parseInt(document.getElementById('qtt').value);
+            displayCart();
+        }
+
+        function displayCart() {
+            cartdata = "<ul>";
+            total = 0;
+            tmp = '"'
+            vnd = 'vnđ'
+            input =
+                "<small>\
+            <input type='number'\
+              style='width:70px;height:25px;background-color: #BBDEFB; text-align: center; border-radius: 3px;'\
+              id='qtt' value='" + sl + "'/>\
+          </small>"
+
+            for (let i = 0; i < iname.length; i++) {
+                total += sl * iprice[i];
+                cartdata +=
+                    "<li>\
+              <div class='item-content'>\
+                <div class='item-media'>\
+                  <img src=" + tmp + image[i] + tmp + "width='100px' height='100px'/>\
+                </div>\
+                <div class='item-inner'>\
+                  <div class='item-title-row'>\
+                    <div class='item-title'>" + iname[i] + "</div>\
+                    <div class='item-after'>" + iprice[i] + vnd + "</div>\
+                  </div>\
+                <div class='item-text'>\
+                  <div class='row'>\
+                    <div class='col-50'> Số lượng: </div>\
+                    <div class='col-50'>" + input + "</div>\
+                  </div>\
+                </div>\
+                <div class='row margin-top'>\
+                    <button class='button button-fill color-orange' style='width:55px;height:33px' onclick='delElement(" + i + ")'>\
+                      <i class='fas fa-trash-alt'></i>\
+                    </button>\
+                    <button onclick='updateQuantitive()' class='button button-fill color-green' style='float:right;width:105px;height:33px'>\
+                      Update\
+                    </button>\
+                  </div>\
+              </div>\
+            </li>"
+            }
+            cartdata += "</ul><div class='item-content'><div class='item-media'><h2>Total</h2></div><div class='item'><div class='item-title-row'> <div class='item-after'><h2>" +
+                total + "vnđ</h2></div></div></div></div><button class='button button-fill color-red open-toast-bottom'>order</button>"
+
+            document.getElementById('cart').innerHTML = cartdata
+            document.getElementById('numCart').innerHTML = iname.length
+
+        }
+
+        function delElement(a) {
+            iname.splice(a, 1)
+            iquantity.splice(a, 1)
+            iprice.splice(a, 1)
+            displayCart()
+        }
+
+        function focusCategories() {
+            document.getElementById('monNuong').focus();
+        }
+
+    </script>
+
+    <script src="lib/framework7-3.4.3/packages/core/js/framework7.min.js"></script>
+    <script src="lib/framework7-3.4.3/packages/core/js/all.js"></script>
+
+
+
+    <!-- App routes -->
+    <script src="js/routes2.js"></script>
+
+    <!-- Your custom app scripts -->
+    <script src="js/app2.js"></script>
 
 </body>
 
