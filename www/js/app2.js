@@ -70,3 +70,9 @@ $$('#my-login-screen .login-button').on('click', function () {
   // Alert username and password
   app.dialog.alert('Username: ' + username + '<br>Password: ' + password);
 });
+
+$$('.open-confirm').on('click', function () {
+  app.dialog.confirm('','Bạn có muốn hoàn thành đặt món?', function () {
+    app.dialog.alert('','Thanks!');
+  });
+});
