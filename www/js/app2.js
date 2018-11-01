@@ -22,6 +22,7 @@ var app  = new Framework7({
       app.dialog.alert('Hello World!');
     },
   },
+  
   // App routes
   routes: routes,
   // Enable panel left visibility breakpoint
@@ -69,4 +70,27 @@ $$('#my-login-screen .login-button').on('click', function () {
 
   // Alert username and password
   app.dialog.alert('Username: ' + username + '<br>Password: ' + password);
+});
+
+var toastBottom = app.toast.create({
+  text: 'Thêm món thành công',
+  closeTimeout: 2000,
+});
+$$('.open-toast-bottom').on('click', function () {
+  toastBottom.open();
+  
+});
+
+var dialog = app.dialog.create({
+  text: 'Hello World',
+  on: {
+    opened: function () {
+      console.log('Dialog opened')
+    }
+  }
+});
+$$('.open-confirm').on('click', function () {
+  app.dialog.confirm('','Bạn có muốn hoàn tất đặt món ?', function () {
+    app.dialog.alert('','Thanks!');
+  });
 });

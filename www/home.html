@@ -2,8 +2,8 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <!--
+    <meta charset="utf-8">
+    <!--
   Customize this policy to fit your own app's needs. For more guidance, see:
       https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
   Some notes:
@@ -12,22 +12,22 @@
       * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
           * Enable inline JS: add 'unsafe-inline' to default-src
   -->
-  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="theme-color" content="#2196f3">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="msapplication-tap-highlight" content="no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#2196f3">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
 
-  <title>My App</title>
+    <title>My App</title>
 
-  <link rel="stylesheet" href="lib/framework7-3.4.3/packages/core/css/framework7.min.css">
-  <link rel="stylesheet" href="lib/framework7-3.4.3/packages/core/css/all.css">
+    <link rel="stylesheet" href="lib/framework7-3.4.3/packages/core/css/framework7.min.css">
+    <link rel="stylesheet" href="lib/framework7-3.4.3/packages/core/css/all.css">
 
 
-  <link rel="stylesheet" href="css/icons2.css">
-  <link rel="stylesheet" href="css/app2.css">
+    <link rel="stylesheet" href="css/icons2.css">
+    <link rel="stylesheet" href="css/app2.css">
 
 
 </head>
@@ -77,10 +77,12 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/dohap/" data-view=".view-main" class="link popup-open" data-popup=".popup-monHap">Món hấp</a>
+                                    <a href="/dohap/" data-view=".view-main" class="link popup-open" data-popup=".popup-monHap">Món
+                                        hấp</a>
                                 </li>
                                 <li>
-                                    <a href="/douong/" data-view=".view-main" class="link popup-open" data-popup=".popup-doUong">Đồ Uống</a>
+                                    <a href="/douong/" data-view=".view-main" class="link popup-open" data-popup=".popup-doUong">Đồ
+                                        Uống</a>
                                 </li>
                             </ul>
                         </div>
@@ -127,7 +129,8 @@
                         </form>
                         <div class="right">
                             <a href="#" class="link icon-only popup-open" data-panel="right" data-popup=".popup-shoppingCard">
-                                <i class="icon material-icons md-only"><i class="fas fa-shopping-cart"></i><span id="numCart" class="badge color-red">0</span></i>
+                                <i class="icon material-icons md-only"><i class="fas fa-shopping-cart"></i><span id="numCart"
+                                        class="badge color-red">0</span></i>
                             </a>
 
                         </div>
@@ -167,7 +170,8 @@
 
                                             <!-- Popover ghi chú -->
                                             <div class="item-subtitle" data-popup=".popup-note">
-                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
+                                                    chú</a>
                                                 <br>
                                                 <small id="price">45000</small>
                                                 <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
@@ -176,10 +180,12 @@
 
 
                                             <div class="item-subtitle">
-                                                <button class="col button button-fill color-red open-toast-bottom" onclick="addItem('img/thit3.jpg','Ba rọi hầm tiêu',45000)">
+                                                <button class="col button button-fill color-red open-toast-bottom"
+                                                    onclick="addItem('img/thit3.jpg','Ba rọi hầm tiêu',45000)">
                                                     Thêm
                                                     món
                                                 </button>
+
                                             </div>
 
                                         </div>
@@ -193,7 +199,8 @@
                                                 <div class="item-title" id="name1">Sườn non nướng</div>
                                             </div>
                                             <div class="item-subtitle" data-popup=".popup-note">
-                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
+                                                    chú</a>
                                                 <br>
                                                 <small>45.000 vnđ</small>
                                                 <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
@@ -203,7 +210,8 @@
 
                                             <div class="item-subtitle">
 
-                                                <button class="col button button-fill color-red open-toast-bottom">Thêm món</button>
+                                                <button class="col button button-fill color-red open-toast-bottom open-confirm">Thêm
+                                                    món</button>
                                             </div>
                                         </div>
                                     </div>
@@ -216,7 +224,8 @@
                                                 <div class="item-title">Bò nướng lu </div>
                                             </div>
                                             <div class="item-subtitle" data-popup=".popup-note">
-                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
+                                                    chú</a>
                                                 <br>
                                                 <small>45.000 vnđ</small>
                                                 <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
@@ -238,7 +247,8 @@
                                                 <div class="item-title">Gà cay phô mai</div>
                                             </div>
                                             <div class="item-subtitle" data-popup=".popup-note">
-                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
+                                                    chú</a>
                                                 <br>
                                                 <small>45.000 vnđ</small>
                                                 <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
@@ -266,7 +276,8 @@
                                             </div>
                                             <!-- Popover ghi chú -->
                                             <div class="item-subtitle" data-popup=".popup-note">
-                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
+                                                    chú</a>
                                                 <br>
                                                 <small>45.000 vnđ</small>
                                                 <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
@@ -286,7 +297,8 @@
                                                 <div class="item-title">Mì xào giòn</div>
                                             </div>
                                             <div class="item-subtitle" data-popup=".popup-note">
-                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
+                                                    chú</a>
                                                 <br>
                                                 <small>45.000 vnđ</small>
                                                 <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
@@ -306,7 +318,8 @@
                                                 <div class="item-title">Bánh khọt</div>
                                             </div>
                                             <div class="item-subtitle" data-popup=".popup-note">
-                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
+                                                    chú</a>
                                                 <br>
                                                 <small>45.000 vnđ</small>
                                                 <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
@@ -326,7 +339,8 @@
                                                 <div class="item-title">Pizza chiên</div>
                                             </div>
                                             <div class="item-subtitle" data-popup=".popup-note">
-                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
+                                                    chú</a>
                                                 <br>
                                                 <small>45.000 vnđ</small>
                                                 <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
@@ -354,7 +368,8 @@
                                             </div>
                                             <!-- Popover ghi chú -->
                                             <div class="item-subtitle" data-popup=".popup-note">
-                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
+                                                    chú</a>
                                                 <br>
                                                 <small>45.000 vnđ</small>
                                                 <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
@@ -374,7 +389,8 @@
                                                 <div class="item-title">Gà hấp hành</div>
                                             </div>
                                             <div class="item-subtitle" data-popup=".popup-note">
-                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
+                                                    chú</a>
                                                 <br>
                                                 <small>45.000 vnđ</small>
                                                 <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
@@ -394,7 +410,8 @@
                                                 <div class="item-title">Nghêu hấp xả ớt</div>
                                             </div>
                                             <div class="item-subtitle" data-popup=".popup-note">
-                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
+                                                    chú</a>
                                                 <br>
                                                 <small>45.000 vnđ</small>
                                                 <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
@@ -414,7 +431,8 @@
                                                 <div class="item-title">Tôm Hấp</div>
                                             </div>
                                             <div class="item-subtitle" data-popup=".popup-note">
-                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
+                                                    chú</a>
                                                 <br>
                                                 <small>45.000 vnđ</small>
                                                 <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
@@ -434,7 +452,8 @@
                                                 <div class="item-title">Canh rau củ</div>
                                             </div>
                                             <div class="item-subtitle" data-popup=".popup-note">
-                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
+                                                    chú</a>
                                                 <br>
                                                 <small>45.000 vnđ</small>
                                                 <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
@@ -462,7 +481,8 @@
                                             </div>
                                             <!-- Popover ghi chú -->
                                             <div class="item-subtitle" data-popup=".popup-note">
-                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
+                                                    chú</a>
                                                 <br>
                                                 <small>45.000 vnđ</small>
                                                 <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
@@ -484,7 +504,8 @@
                                                 <div class="item-title">Coca Cola</div>
                                             </div>
                                             <div class="item-subtitle" data-popup=".popup-note">
-                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
+                                                    chú</a>
                                                 <br>
                                                 <small>45.000 vnđ</small>
                                                 <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
@@ -504,7 +525,8 @@
                                                 <div class="item-title">Trà gừng </div>
                                             </div>
                                             <div class="item-subtitle" data-popup=".popup-note">
-                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
+                                                    chú</a>
                                                 <br>
                                                 <small>45.000 vnđ</small>
                                                 <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
@@ -524,7 +546,8 @@
                                                 <div class="item-title">Trà chanh</div>
                                             </div>
                                             <div class="item-subtitle" data-popup=".popup-note">
-                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
+                                                    chú</a>
                                                 <br>
                                                 <small>45.000 vnđ</small>
                                                 <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
@@ -544,7 +567,8 @@
                                                 <div class="item-title">Sữa đậu nành</div>
                                             </div>
                                             <div class="item-subtitle" data-popup=".popup-note">
-                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
+                                                    chú</a>
                                                 <br>
                                                 <small>45.000 vnđ</small>
                                                 <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
@@ -564,7 +588,8 @@
                                                 <div class="item-title">Pepsi</div>
                                             </div>
                                             <div class="item-subtitle" data-popup=".popup-note">
-                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi chú</a>
+                                                <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
+                                                    chú</a>
                                                 <br>
                                                 <small>45.000 vnđ</small>
                                                 <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
@@ -626,6 +651,20 @@
         <div class="block">
 
             <div class="list media-list" id="cart">
+             
+                <div class='item-content'>
+                    <div class='item-media'>
+                        <h2>Total</h2>
+                    </div>
+                    <div class='item'>
+                        <div class='item-title-row'>
+                            <div class='item-after'>
+                                <h2>0 Vnđ</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class='col button button-fill color-red open-confirm'>order</button>
 
             </div>
 
@@ -666,6 +705,27 @@
         <div class="block">
 
             <div class="list media-list">
+
+                <button class="col button button-fill color-red open-toast-bottom open-confirm" onclick="addItem('img/thit3.jpg','Ba rọi hầm tiêu',45000)">
+                    Thêm
+                    món
+                </button>
+                <div class='item-content'>
+                    <div class='item-media'>
+                        <h2>Total</h2>
+                    </div>
+                    <div class='item'>
+                        <div class='item-title-row'>
+                            <div class='item-after'>
+                                <h2>" +
+                                    total + "vnđ</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <button class='col button button-fill color-red open-toast-bottom open-confirm'>order</button>
+                </div>
+
+
 
             </div>
 
@@ -719,6 +779,16 @@
     <script src="cordova.js"></script>
     -->
 
+    <script src="lib/framework7-3.4.3/packages/core/js/framework7.min.js"></script>
+    <script src="lib/framework7-3.4.3/packages/core/js/all.js"></script>
+
+
+
+    <!-- App routes -->
+    <script src="js/routes2.js"></script>
+
+    <!-- Your custom app scripts -->
+    <script src="js/app2.js"></script>
 
 
     <script>
@@ -727,7 +797,19 @@
         iprice = [];
         image = [];
         sl = 1;
-
+        order = "<div class='item-content'>\
+                    <div class='item-media'>\
+                        <h2>Total</h2>\
+                    </div>\
+                    <div class='item'>\
+                        <div class='item-title-row'>\
+                            <div class='item-after'>\
+                                <h2>0 Vnđ</h2>\
+                            </div>\
+                        </div>\
+                    </div>\
+                </div>\
+                <button class='col button button-fill color-red open-toast-bottom open-confirm'>order</button>";
 
         function addItem(a, b, d) {
             for (let i = 0; i < iname.length; i++) {
@@ -760,6 +842,7 @@
             total = 0;
             tmp = '"'
             vnd = 'vnđ'
+       
             input =
                 "<small>\
             <input type='number'\
@@ -798,9 +881,9 @@
             </li>"
             }
             cartdata += "</ul><div class='item-content'><div class='item-media'><h2>Total</h2></div><div class='item'><div class='item-title-row'> <div class='item-after'><h2>" +
-                total + "vnđ</h2></div></div></div></div><button class='button button-fill color-red open-toast-bottom'>order</button>"
+                total + "vnđ</h2></div></div></div></div> <div class='block block-strong'><button onclick='refreshPage()' class='col button button-fill color-red open-toast-bottom open-confirm'>order</button></div>"
 
-            document.getElementById('cart').innerHTML = cartdata
+            document.getElementById('cart').innerHTML = order
             document.getElementById('numCart').innerHTML = iname.length
 
         }
@@ -809,7 +892,30 @@
             iname.splice(a, 1)
             iquantity.splice(a, 1)
             iprice.splice(a, 1)
+            sl = 1
+            document.getElementById('numCart').innerHTML = 0;
             displayCart()
+        }
+
+        function refreshPage() {
+            total = 0;
+            document.getElementById('cart').innerHTML = "<div class='item-content'>\
+                    <div class='item-media'>\
+                        <h2>Total</h2>\
+                    </div>\
+                    <div class='item'>\
+                        <div class='item-title-row'>\
+                            <div class='item-after'>\
+                                <h2>0 Vnđ</h2>\
+                            </div>\
+                        </div>\
+                    </div>\
+                </div>\
+                <button class='col button button-fill color-red  open-confirm'>order</button>";
+
+            document.getElementById('numCart').innerHTML = 0;
+            sl = 1;
+
         }
 
         function focusCategories() {
@@ -818,16 +924,6 @@
 
     </script>
 
-    <script src="lib/framework7-3.4.3/packages/core/js/framework7.min.js"></script>
-    <script src="lib/framework7-3.4.3/packages/core/js/all.js"></script>
-
-
-
-    <!-- App routes -->
-    <script src="js/routes2.js"></script>
-
-    <!-- Your custom app scripts -->
-    <script src="js/app2.js"></script>
 
 </body>
 
