@@ -71,6 +71,16 @@ $$('#my-login-screen .login-button').on('click', function () {
   app.dialog.alert('Username: ' + username + '<br>Password: ' + password);
 });
 
+var toastBottom = app.toast.create({
+  text: 'Thêm món thành công',
+  closeTimeout: 2000,
+});
+
+$$('.open-toast-bottom').on('click', function () {
+  toastBottom.open();
+  
+});
+
 $$('.open-confirm').on('click', function () {
   app.dialog.confirm('','Bạn có muốn hoàn thành đặt món?', function () {
     app.dialog.alert('','Thanks!');
