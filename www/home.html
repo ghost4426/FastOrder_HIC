@@ -44,11 +44,12 @@
                     <div class="navbar">
                         <div class="navbar-inner sliding">
                             <div class="title">Trúc Xinh</div>
+                           
                         </div>
                     </div>
                     <div class="page-content">
                         <div class="block-title">Wifi</div>
-                        <div class="list links-list">
+                        <div class="list links-list">                           
                             <ul>
                                 <li>
                                     <div style="padding: 0px 42px 0px 16px; height: 36px;">Tên Wifi : Trucxinh</div>
@@ -66,22 +67,22 @@
                         <div class="list links-list">
 
                             <ul>
-                                <li onclick="focusCategories()">
-                                    <a href="/monnuong/" data-view=".view-main">Món Nướng</a>
+                                <li onclick="focusCategories1()">
+                                    <a data-view=".view-main">Món Nướng</a>
                                 </li>
 
-                                <li>
-                                    <a href="/monchien/" data-view=".view-main" class="link popup-open" data-popup=".popup-monChien">
+                                <li onclick="focusCategories2()">
+                                    <a data-view=".view-main" class="link popup-open">
                                         Món
-                                        chiên
+                                        Chiên
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="/dohap/" data-view=".view-main" class="link popup-open" data-popup=".popup-monHap">Món
-                                        hấp</a>
+                                <li onclick="focusCategories3()">
+                                    <a data-view=".view-main" class="link popup-open">Món
+                                        Hấp</a>
                                 </li>
-                                <li>
-                                    <a href="/douong/" data-view=".view-main" class="link popup-open" data-popup=".popup-doUong">Đồ
+                                <li onclick="focusCategories4()">
+                                    <a data-view=".view-main" class="link popup-open">Đồ
                                         Uống</a>
                                 </li>
                             </ul>
@@ -173,18 +174,19 @@
                                                 <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
                                                     chú</a>
                                                 <br>
-                                                <small id="price">45000</small>
-                                                <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
+                                                <small id="price">45.000 vnđ</small>
+                                                <small style="color: green;margin-left: 40%"><i>Còn hàng</i></small>
                                             </div>
 
 
 
                                             <div class="item-subtitle">
-                                                <button class="col button button-fill color-red open-toast-bottom"
-                                                    onclick="addItem('img/thit3.jpg','Ba rọi hầm tiêu',45000)">
-                                                    Thêm
-                                                    món
-                                                </button>
+                                                <div>
+                                                    <button style="width:50px;height:35px;border-radius: 3px" class="col button open-toast-bottom"
+                                                        onclick="addItem('img/thit3.jpg','Ba rọi hầm tiêu',45000)">
+                                                        <i style="width:100%" class="fas fa-plus-square"></i>
+                                                    </button>
+                                                </div>
 
                                             </div>
 
@@ -202,15 +204,16 @@
                                                 <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
                                                     chú</a>
                                                 <br>
-                                                <small>45.000 vnđ</small>
-                                                <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
+                                                <small>44.000 vnđ</small>
+                                                <small style="color: green;margin-left: 40%"><i>Còn hàng</i></small>
 
                                             </div>
 
 
                                             <div class="item-subtitle">
 
-                                                <button class="col button button-fill color-red open-toast-bottom open-confirm">Thêm
+                                                <button style="width:60%" onclick="addItem('img/thit2.jpg','Sườn non nướng',45000)" class="col button button-fill color-red open-toast-bottom"
+                                                    id="monNuong">Thêm
                                                     món</button>
                                             </div>
                                         </div>
@@ -218,7 +221,7 @@
                                 </li>
                                 <li>
                                     <div class="item-content">
-                                        <div class="item-media"><img src="img/thit4.jpg" width="100px" height="100px" /></div>
+                                        <div class="item-media"><img src="img/thit1.jpg" width="100px" height="100px" /></div>
                                         <div class="item-inner">
                                             <div class="item-title-row">
                                                 <div class="item-title">Bò nướng lu </div>
@@ -227,14 +230,15 @@
                                                 <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
                                                     chú</a>
                                                 <br>
-                                                <small>45.000 vnđ</small>
-                                                <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
+                                                <small>43.000 vnđ</small>
+                                                <small style="color: green;margin-left: 40%"><i>Còn hàng</i></small>
                                             </div>
 
 
                                             <div class="item-subtitle">
 
-                                                <button class="col button button-fill color-red">Thêm món</button>
+                                                <button style="width:60%" onclick="addItem('img/thit1.jpg','Bò nướng lu',45000)" class="col button button-fill color-red">Thêm
+                                                    món</button>
                                             </div>
                                         </div>
                                     </div>
@@ -250,12 +254,13 @@
                                                 <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
                                                     chú</a>
                                                 <br>
-                                                <small>45.000 vnđ</small>
-                                                <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
+                                                <small>42.000 vnđ</small>
+                                                <small style="color: green;margin-left: 40%"><i>Còn hàng</i></small>
                                             </div>
                                             <div class="item-subtitle">
 
-                                                <button class="col button button-fill color-red">Thêm món</button>
+                                                <button style="width:60%" onclick="addItem('img/garan.jpg','Gà cay phô mai',45000)" class="col button button-fill color-red">Thêm
+                                                    món</button>
                                             </div>
                                         </div>
                                     </div>
@@ -305,7 +310,7 @@
                                             </div>
                                             <div class="item-subtitle">
 
-                                                <button class="col button button-fill color-red">Thêm món</button>
+                                                <button style="width:60%" class="col button button-fill color-red" id="monChien">Thêm món</button>
                                             </div>
                                         </div>
                                     </div>
@@ -397,7 +402,7 @@
                                             </div>
                                             <div class="item-subtitle">
 
-                                                <button class="col button button-fill color-red">Thêm món</button>
+                                                <button class="col button button-fill color-red" id="monHap">Thêm món</button>
                                             </div>
                                         </div>
                                     </div>
@@ -491,7 +496,7 @@
 
                                             <div class="item-subtitle">
 
-                                                <button class="col button button-fill color-red" id="monNuong">Thêm món</button>
+                                                <button class="col button button-fill color-red" id="doUong">Thêm món</button>
                                             </div>
                                         </div>
                                     </div>
@@ -648,10 +653,10 @@
 
             </div>
         </div>
-        <div class="block">
+        <div class="block" id='nhulin'>
 
             <div class="list media-list" id="cart">
-             
+
                 <div class='item-content'>
                     <div class='item-media'>
                         <h2>Total</h2>
@@ -665,6 +670,7 @@
                     </div>
                 </div>
                 <button class='col button button-fill color-red open-confirm'>order</button>
+
 
             </div>
 
@@ -706,7 +712,7 @@
 
             <div class="list media-list">
 
-                <button class="col button button-fill color-red open-toast-bottom open-confirm" onclick="addItem('img/thit3.jpg','Ba rọi hầm tiêu',45000)">
+                <button  class="col button button-fill color-red open-toast-bottom open-confirm" onclick="addItem('img/thit3.jpg','Ba rọi hầm tiêu',45000)">
                     Thêm
                     món
                 </button>
@@ -796,7 +802,7 @@
         iquantity = [];
         iprice = [];
         image = [];
-        sl = 1;
+        qtt = [];
         order = "<div class='item-content'>\
                     <div class='item-media'>\
                         <h2>Total</h2>\
@@ -812,23 +818,19 @@
                 <button class='col button button-fill color-red open-toast-bottom open-confirm'>order</button>";
 
         function addItem(a, b, d) {
-            for (let i = 0; i < iname.length; i++) {
-
+            for (var i = 0; i < iname.length; i++) {
                 if (iname[i] == b) {
-                    sl += 1;
-                    console.log(sl);
-                    iquantity[i] = sl;
+                    iquantity[i] = iquantity[i] + 1;
+                    iprice[i] += d;
                     displayCart();
                     return;
                 }
-
             }
 
             image.push(a);
             iname.push(b);
-            iquantity.push(sl);
+            iquantity.push(1);
             iprice.push(d);
-
             displayCart();
         }
 
@@ -842,16 +844,9 @@
             total = 0;
             tmp = '"'
             vnd = 'vnđ'
-       
-            input =
-                "<small>\
-            <input type='number'\
-              style='width:70px;height:25px;background-color: #BBDEFB; text-align: center; border-radius: 3px;'\
-              id='qtt' value='" + sl + "'/>\
-          </small>"
 
             for (let i = 0; i < iname.length; i++) {
-                total += sl * iprice[i];
+                total += iprice[i];
                 cartdata +=
                     "<li>\
               <div class='item-content'>\
@@ -866,7 +861,7 @@
                 <div class='item-text'>\
                   <div class='row'>\
                     <div class='col-50'> Số lượng: </div>\
-                    <div class='col-50'>" + input + "</div>\
+                    <div class='col-50'>" + iquantity[i] + "</div>\
                   </div>\
                 </div>\
                 <div class='row margin-top'>\
@@ -883,7 +878,7 @@
             cartdata += "</ul><div class='item-content'><div class='item-media'><h2>Total</h2></div><div class='item'><div class='item-title-row'> <div class='item-after'><h2>" +
                 total + "vnđ</h2></div></div></div></div> <div class='block block-strong'><button onclick='refreshPage()' class='col button button-fill color-red open-toast-bottom open-confirm'>order</button></div>"
 
-            document.getElementById('cart').innerHTML = order
+            document.getElementById('cart').innerHTML = cartdata
             document.getElementById('numCart').innerHTML = iname.length
 
         }
@@ -899,7 +894,8 @@
 
         function refreshPage() {
             total = 0;
-            document.getElementById('cart').innerHTML = "<div class='item-content'>\
+            document.getElementById('cart').innerHTML = "\
+                <div class='item-content'>\
                     <div class='item-media'>\
                         <h2>Total</h2>\
                     </div>\
@@ -911,15 +907,23 @@
                         </div>\
                     </div>\
                 </div>\
-                <button class='col button button-fill color-red  open-confirm'>order</button>";
+                <button class='col button button-fill color-red open-toast-bottom open-confirm'>order</button>";
 
             document.getElementById('numCart').innerHTML = 0;
-            sl = 1;
 
         }
 
-        function focusCategories() {
+        function focusCategories1() {
             document.getElementById('monNuong').focus();
+        }
+        function focusCategories2() {
+            document.getElementById('monHap').focus();
+        }
+        function focusCategories3() {
+            document.getElementById('monChien').focus();
+        }
+        function focusCategories4() {
+            document.getElementById('doUong').focus();
         }
 
     </script>
