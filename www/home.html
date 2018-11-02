@@ -44,12 +44,11 @@
                     <div class="navbar">
                         <div class="navbar-inner sliding">
                             <div class="title">Trúc Xinh</div>
-                           
                         </div>
                     </div>
                     <div class="page-content">
                         <div class="block-title">Wifi</div>
-                        <div class="list links-list">                           
+                        <div class="list links-list">
                             <ul>
                                 <li>
                                     <div style="padding: 0px 42px 0px 16px; height: 36px;">Tên Wifi : Trucxinh</div>
@@ -67,22 +66,22 @@
                         <div class="list links-list">
 
                             <ul>
-                                <li onclick="focusCategories1()">
-                                    <a data-view=".view-main">Món Nướng</a>
+                                <li onclick="focusCategories()">
+                                    <a href="/monnuong/" data-view=".view-main">Món Nướng</a>
                                 </li>
 
-                                <li onclick="focusCategories2()">
-                                    <a data-view=".view-main" class="link popup-open">
+                                <li>
+                                    <a href="/monchien/" data-view=".view-main" class="link popup-open" data-popup=".popup-monChien">
                                         Món
-                                        Chiên
+                                        chiên
                                     </a>
                                 </li>
-                                <li onclick="focusCategories3()">
-                                    <a data-view=".view-main" class="link popup-open">Món
-                                        Hấp</a>
+                                <li>
+                                    <a href="/dohap/" data-view=".view-main" class="link popup-open" data-popup=".popup-monHap">Món
+                                        hấp</a>
                                 </li>
-                                <li onclick="focusCategories4()">
-                                    <a data-view=".view-main" class="link popup-open">Đồ
+                                <li>
+                                    <a href="/douong/" data-view=".view-main" class="link popup-open" data-popup=".popup-doUong">Đồ
                                         Uống</a>
                                 </li>
                             </ul>
@@ -174,20 +173,22 @@
                                                 <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
                                                     chú</a>
                                                 <br>
-                                                <small id="price">45.000 vnđ</small>
-                                                <small style="color: green;margin-left: 40%"><i>Còn hàng</i></small>
+                                                <small id="price">45,000 đ</small>
+                                                <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
                                             </div>
 
 
+                                            <div class="row">
+                                                <div class="col-70"></div>
+                                                <div class="col-30">
+                                                    <div class="item-subtitle">
+                                                        <button class="col button button-fill open-toast-bottom open-confirm"
+                                                            style="background-color: #FFCDD2" onclick="addItem('img/thit3.jpg','Ba rọi hầm tiêu',45000)">
+                                                            <i class="fa fa-plus"></i>
+                                                        </button>
 
-                                            <div class="item-subtitle">
-                                                <div>
-                                                    <button style="width:50px;height:35px;border-radius: 3px" class="col button open-toast-bottom"
-                                                        onclick="addItem('img/thit3.jpg','Ba rọi hầm tiêu',45000)">
-                                                        <i style="width:100%" class="fas fa-plus-square"></i>
-                                                    </button>
+                                                    </div>
                                                 </div>
-
                                             </div>
 
                                         </div>
@@ -204,16 +205,15 @@
                                                 <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
                                                     chú</a>
                                                 <br>
-                                                <small>44.000 vnđ</small>
-                                                <small style="color: green;margin-left: 40%"><i>Còn hàng</i></small>
+                                                <small>45.000 đ</small>
+                                                <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
 
                                             </div>
 
 
                                             <div class="item-subtitle">
 
-                                                <button style="width:60%" onclick="addItem('img/thit2.jpg','Sườn non nướng',45000)" class="col button button-fill color-red open-toast-bottom"
-                                                    id="monNuong">Thêm
+                                                <button class="col button button-fill color-red open-toast-bottom open-confirm">Thêm
                                                     món</button>
                                             </div>
                                         </div>
@@ -221,7 +221,7 @@
                                 </li>
                                 <li>
                                     <div class="item-content">
-                                        <div class="item-media"><img src="img/thit1.jpg" width="100px" height="100px" /></div>
+                                        <div class="item-media"><img src="img/thit4.jpg" width="100px" height="100px" /></div>
                                         <div class="item-inner">
                                             <div class="item-title-row">
                                                 <div class="item-title">Bò nướng lu </div>
@@ -230,15 +230,14 @@
                                                 <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
                                                     chú</a>
                                                 <br>
-                                                <small>43.000 vnđ</small>
-                                                <small style="color: green;margin-left: 40%"><i>Còn hàng</i></small>
+                                                <small>45.000 đ</small>
+                                                <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
                                             </div>
 
 
                                             <div class="item-subtitle">
 
-                                                <button style="width:60%" onclick="addItem('img/thit1.jpg','Bò nướng lu',45000)" class="col button button-fill color-red">Thêm
-                                                    món</button>
+                                                <button class="col button button-fill color-red">Thêm món</button>
                                             </div>
                                         </div>
                                     </div>
@@ -254,13 +253,12 @@
                                                 <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
                                                     chú</a>
                                                 <br>
-                                                <small>42.000 vnđ</small>
-                                                <small style="color: green;margin-left: 40%"><i>Còn hàng</i></small>
+                                                <small>45.000 đ</small>
+                                                <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
                                             </div>
                                             <div class="item-subtitle">
 
-                                                <button style="width:60%" onclick="addItem('img/garan.jpg','Gà cay phô mai',45000)" class="col button button-fill color-red">Thêm
-                                                    món</button>
+                                                <button class="col button button-fill color-red">Thêm món</button>
                                             </div>
                                         </div>
                                     </div>
@@ -284,7 +282,7 @@
                                                 <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
                                                     chú</a>
                                                 <br>
-                                                <small>45.000 vnđ</small>
+                                                <small>45.000 đ</small>
                                                 <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
                                             </div>
                                             <div class="item-subtitle">
@@ -305,12 +303,12 @@
                                                 <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
                                                     chú</a>
                                                 <br>
-                                                <small>45.000 vnđ</small>
+                                                <small>45.000 đ</small>
                                                 <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
                                             </div>
                                             <div class="item-subtitle">
 
-                                                <button style="width:60%" class="col button button-fill color-red" id="monChien">Thêm món</button>
+                                                <button class="col button button-fill color-red">Thêm món</button>
                                             </div>
                                         </div>
                                     </div>
@@ -326,7 +324,7 @@
                                                 <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
                                                     chú</a>
                                                 <br>
-                                                <small>45.000 vnđ</small>
+                                                <small>45.000 đ</small>
                                                 <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
                                             </div>
                                             <div class="item-subtitle">
@@ -347,7 +345,7 @@
                                                 <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
                                                     chú</a>
                                                 <br>
-                                                <small>45.000 vnđ</small>
+                                                <small>45.000 đ</small>
                                                 <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
                                             </div>
                                             <div class="item-subtitle">
@@ -376,7 +374,7 @@
                                                 <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
                                                     chú</a>
                                                 <br>
-                                                <small>45.000 vnđ</small>
+                                                <small>45.000 đ</small>
                                                 <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
                                             </div>
                                             <div class="item-subtitle">
@@ -397,12 +395,12 @@
                                                 <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
                                                     chú</a>
                                                 <br>
-                                                <small>45.000 vnđ</small>
+                                                <small>45.000 đ</small>
                                                 <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
                                             </div>
                                             <div class="item-subtitle">
 
-                                                <button class="col button button-fill color-red" id="monHap">Thêm món</button>
+                                                <button class="col button button-fill color-red">Thêm món</button>
                                             </div>
                                         </div>
                                     </div>
@@ -418,7 +416,7 @@
                                                 <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
                                                     chú</a>
                                                 <br>
-                                                <small>45.000 vnđ</small>
+                                                <small>45.000 đ</small>
                                                 <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
                                             </div>
                                             <div class="item-subtitle">
@@ -439,7 +437,7 @@
                                                 <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
                                                     chú</a>
                                                 <br>
-                                                <small>45.000 vnđ</small>
+                                                <small>45.000 đ</small>
                                                 <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
                                             </div>
                                             <div class="item-subtitle">
@@ -460,7 +458,7 @@
                                                 <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
                                                     chú</a>
                                                 <br>
-                                                <small>45.000 vnđ</small>
+                                                <small>45.000 đ</small>
                                                 <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
                                             </div>
                                             <div class="item-subtitle">
@@ -489,14 +487,14 @@
                                                 <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
                                                     chú</a>
                                                 <br>
-                                                <small>45.000 vnđ</small>
+                                                <small>45.000 đ</small>
                                                 <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
                                             </div>
 
 
                                             <div class="item-subtitle">
 
-                                                <button class="col button button-fill color-red" id="doUong">Thêm món</button>
+                                                <button class="col button button-fill color-red">Thêm món</button>
                                             </div>
                                         </div>
                                     </div>
@@ -512,12 +510,12 @@
                                                 <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
                                                     chú</a>
                                                 <br>
-                                                <small>45.000 vnđ</small>
+                                                <small>45.000 đ</small>
                                                 <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
                                             </div>
                                             <div class="item-subtitle">
 
-                                                <button class="col button button-fill color-red">Thêm món</button>
+                                                <button class="col button button-fill color-red" id="monNuong">Thêm món</button>
                                             </div>
                                         </div>
                                     </div>
@@ -533,7 +531,7 @@
                                                 <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
                                                     chú</a>
                                                 <br>
-                                                <small>45.000 vnđ</small>
+                                                <small>45.000 đ</small>
                                                 <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
                                             </div>
                                             <div class="item-subtitle">
@@ -554,7 +552,7 @@
                                                 <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
                                                     chú</a>
                                                 <br>
-                                                <small>45.000 vnđ</small>
+                                                <small>45.000 đ</small>
                                                 <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
                                             </div>
                                             <div class="item-subtitle">
@@ -575,7 +573,7 @@
                                                 <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
                                                     chú</a>
                                                 <br>
-                                                <small>45.000 vnđ</small>
+                                                <small>45.000 đ</small>
                                                 <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
                                             </div>
                                             <div class="item-subtitle">
@@ -596,7 +594,7 @@
                                                 <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
                                                     chú</a>
                                                 <br>
-                                                <small>45.000 vnđ</small>
+                                                <small>45.000 đ</small>
                                                 <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
                                             </div>
                                             <div class="item-subtitle">
@@ -653,7 +651,7 @@
 
             </div>
         </div>
-        <div class="block" id='nhulin'>
+        <div class="block">
 
             <div class="list media-list" id="cart">
 
@@ -664,12 +662,12 @@
                     <div class='item'>
                         <div class='item-title-row'>
                             <div class='item-after'>
-                                <h2>0 Vnđ</h2>
+                                <h2>0 đ</h2>
                             </div>
                         </div>
                     </div>
                 </div>
-                <button class='col button button-fill color-red open-confirm'>order</button>
+                <button class='col button button-fill color-red open-confirm-order'>order</button>
 
 
             </div>
@@ -712,7 +710,7 @@
 
             <div class="list media-list">
 
-                <button  class="col button button-fill color-red open-toast-bottom open-confirm" onclick="addItem('img/thit3.jpg','Ba rọi hầm tiêu',45000)">
+                <button class="col button button-fill color-red open-toast-bottom open-confirm" onclick="addItem('img/thit3.jpg','Ba rọi hầm tiêu',45000)">
                     Thêm
                     món
                 </button>
@@ -723,12 +721,11 @@
                     <div class='item'>
                         <div class='item-title-row'>
                             <div class='item-after'>
-                                <h2>" +
-                                    total + "vnđ</h2>
+                                <h2>" + total + "đ</h2>
                             </div>
                         </div>
                     </div>
-                    <button class='col button button-fill color-red open-toast-bottom open-confirm'>order</button>
+                    <button class='col button button-fill color-red open-confirm-order'>order</button>
                 </div>
 
 
@@ -787,7 +784,7 @@
 
     <script src="lib/framework7-3.4.3/packages/core/js/framework7.min.js"></script>
     <script src="lib/framework7-3.4.3/packages/core/js/all.js"></script>
-
+    <script src="js/jquery.js"></script>
 
 
     <!-- App routes -->
@@ -802,7 +799,7 @@
         iquantity = [];
         iprice = [];
         image = [];
-        qtt = [];
+        sl = 1;
         order = "<div class='item-content'>\
                     <div class='item-media'>\
                         <h2>Total</h2>\
@@ -810,27 +807,31 @@
                     <div class='item'>\
                         <div class='item-title-row'>\
                             <div class='item-after'>\
-                                <h2>0 Vnđ</h2>\
+                                <h2>0 đ</h2>\
                             </div>\
                         </div>\
                     </div>\
                 </div>\
-                <button class='col button button-fill color-red open-toast-bottom open-confirm'>order</button>";
+                <button class='col button button-fill color-red open-confirm-order'>order</button>";
 
         function addItem(a, b, d) {
-            for (var i = 0; i < iname.length; i++) {
+            for (let i = 0; i < iname.length; i++) {
+
                 if (iname[i] == b) {
-                    iquantity[i] = iquantity[i] + 1;
-                    iprice[i] += d;
+                    sl += 1;
+                    console.log(sl);
+                    iquantity[i] = sl;
                     displayCart();
                     return;
                 }
+
             }
 
             image.push(a);
             iname.push(b);
-            iquantity.push(1);
+            iquantity.push(sl);
             iprice.push(d);
+
             displayCart();
         }
 
@@ -843,13 +844,20 @@
             cartdata = "<ul>";
             total = 0;
             tmp = '"'
-            vnd = 'vnđ'
+            vnd = 'đ'
+
+            input =
+                "<small>\
+            <input type='number'\
+              style='width:70px;height:25px;background-color: #BBDEFB; text-align: center; border-radius: 3px;'\
+              id='qtt' value='" + sl + "'/>\
+          </small>"
 
             for (let i = 0; i < iname.length; i++) {
-                total += iprice[i];
+                total += sl * iprice[i];
                 cartdata +=
                     "<li>\
-              <div class='item-content'>\
+            <div class='item-content'>\
                 <div class='item-media'>\
                   <img src=" + tmp + image[i] + tmp + "width='100px' height='100px'/>\
                 </div>\
@@ -859,24 +867,47 @@
                     <div class='item-after'>" + iprice[i] + vnd + "</div>\
                   </div>\
                 <div class='item-text'>\
-                  <div class='row'>\
-                    <div class='col-50'> Số lượng: </div>\
-                    <div class='col-50'>" + iquantity[i] + "</div>\
-                  </div>\
+                    <div class='stepper stepper-fill stepper-init' style='width: 50%;'>\
+                        <div class='stepper-button-minus'>\
+                        </div>\
+                    <div class='stepper-input-wrap'>\
+                        <input id='quantity' type='text' value='1' min='0' max='100' step='1' readonly>\
+                    </div>\
+                    <div onclick='add("+i+")' class='stepper-button-plus'>\
+                    </div>\
                 </div>\
-                <div class='row margin-top'>\
-                    <button class='button button-fill color-orange' style='width:55px;height:33px' onclick='delElement(" + i + ")'>\
-                      <i class='fas fa-trash-alt'></i>\
-                    </button>\
-                    <button onclick='updateQuantitive()' class='button button-fill color-green' style='float:right;width:105px;height:33px'>\
-                      Update\
-                    </button>\
-                  </div>\
-              </div>\
+                <div class='row'>\
+                    <div class='col-50'> Số lượng: </div>\
+                    <div class='col-50'>" + input + "</div>\
+                </div>\
+            </div>\
+            <div class='row margin-top'>\
+                <button class='button button-fill color-orange' style='width:55px;height:33px' onclick='delElement(" + i + ")'>\
+                    <i class='fas fa-trash-alt'></i>\
+                </button>\
+                <button onclick='updateQuantitive()' class='button button-fill color-green' style='float:right;width:105px;height:33px'>\
+                    Update\
+                </button>\
+                </div>\
+            </div>\
             </li>"
             }
-            cartdata += "</ul><div class='item-content'><div class='item-media'><h2>Total</h2></div><div class='item'><div class='item-title-row'> <div class='item-after'><h2>" +
-                total + "vnđ</h2></div></div></div></div> <div class='block block-strong'><button onclick='refreshPage()' class='col button button-fill color-red open-toast-bottom open-confirm'>order</button></div>"
+            cartdata += "</ul>\
+            <div class='item-content'>\
+                <div class='item-media'>\
+                    <h2>Total</h2>\
+                </div>\
+                <div class='item'>\
+                    <div class='item-title-row'>\
+                        <div class='item-after'>\
+                            <h2>" + total.toLocaleString('VN') + " đ</h2>\
+                        </div>\
+                    </div>\
+                </div>\
+            </div>\
+            <div class='block block-strong'>\
+                <button onclick='refreshPage()' class='col button button-fill color-red open-confirm-order'>order</button>\
+            </div>"
 
             document.getElementById('cart').innerHTML = cartdata
             document.getElementById('numCart').innerHTML = iname.length
@@ -893,8 +924,10 @@
         }
 
         function refreshPage() {
-            total = 0;
-            document.getElementById('cart').innerHTML = "\
+            app.dialog.confirm('', 'Bạn có muốn hoàn tất đặt món ?', function () {
+                app.dialog.alert('', 'Thanks!', function () {
+                    total = 0;
+                    document.getElementById('cart').innerHTML = "\
                 <div class='item-content'>\
                     <div class='item-media'>\
                         <h2>Total</h2>\
@@ -902,29 +935,42 @@
                     <div class='item'>\
                         <div class='item-title-row'>\
                             <div class='item-after'>\
-                                <h2>0 Vnđ</h2>\
+                                <h2>0 đ</h2>\
                             </div>\
                         </div>\
                     </div>\
                 </div>\
-                <button class='col button button-fill color-red open-toast-bottom open-confirm'>order</button>";
+                <button class='col button button-fill color-red open-confirm-order '>order</button>";
 
+
+                });
+            });
             document.getElementById('numCart').innerHTML = 0;
-
+            sl = 0;
         }
 
-        function focusCategories1() {
+        function focusCategories() {
             document.getElementById('monNuong').focus();
         }
-        function focusCategories2() {
-            document.getElementById('monHap').focus();
-        }
-        function focusCategories3() {
-            document.getElementById('monChien').focus();
-        }
-        function focusCategories4() {
-            document.getElementById('doUong').focus();
-        }
+        
+function add(i){
+
+    var stepper = app.stepper.create({
+            el: '.stepper',
+            on: {
+                change: function () {
+                    console.log('Stepper value changed')
+                }
+            },
+        changeQuantity(i)
+            
+        });
+}
+
+function changeQuantity(i){
+   var quantity = document.getElementById("quantity")
+   
+}
 
     </script>
 
