@@ -220,7 +220,7 @@
 
                                             <div class="item-subtitle">
 
-                                                <button style="width:55%" onclick="addItem('img/thit2.jpg','Sườn non nướng',45000)"
+                                                <button style="width:55%" onclick="addItem('img/thit2.jpg','Sườn non nướng',44000)"
                                                     class="col button button-fill color-red open-toast-bottom" id="monNuong">Thêm
                                                     món</button>
                                             </div>
@@ -245,7 +245,7 @@
 
                                             <div class="item-subtitle">
 
-                                                <button style="width:55%" onclick="addItem('img/thit1.jpg','Bò nướng lu',45000)"
+                                                <button style="width:55%" onclick="addItem('img/thit1.jpg','Bò nướng lu',43000)"
                                                     class="col button button-fill color-red">Thêm
                                                     món</button>
                                             </div>
@@ -268,7 +268,7 @@
                                             </div>
                                             <div class="item-subtitle">
 
-                                                <button style="width:55%" onclick="addItem('img/garan.jpg','Gà cay phô mai',45000)"
+                                                <button style="width:55%" onclick="addItem('img/garan.jpg','Gà cay phô mai',43000)"
                                                     class="col button button-fill color-red">Thêm
                                                     món</button>
                                             </div>
@@ -817,19 +817,24 @@
             iquantity.splice(a, 1)
             iprice.splice(a, 1)
             sl = 1
-            document.getElementById('numCart').innerHTML = 0;
+            document.getElementById('numCart').innerHTML = iname.length;
             displayCart()
         }
 
         function addToBill() {
 
             for (var i = 0; i < bname.length; i++) {
-                if (bname[i] == iname[i]) {
-                    bquantity[i] = iquantity[i] + bquantity[i];
-                    bprice[i] += iprice[i];
+                for (let j = 0; j < iname.length; j++) {
+                    if (bname[i] == iname[j]) {
+                    bquantity[i] += iquantity[j];
+                    bprice[i] += iprice[j];
+               
                     displayBill();
                     return;
                 }
+                    
+                }
+                
             }
 
             for (let i = 0; i < iname.length; i++) {
@@ -838,6 +843,7 @@
                 bquantity.push(iquantity[i]);
                 bprice.push(iprice[i]);
             }
+       
             displayBill();
         }
         function clearCart() {
@@ -845,7 +851,9 @@
             iquantity = [];
             iprice = [];
             image = [];
-            qtt = [];
+
+            document.getElementById('cart').innerHTML = "";
+            document.getElementById('numCart').innerHTML = 0;
         }
 
         function displayBill() {
@@ -889,7 +897,6 @@
                 total + "vnđ</h2></div></div></div></div> <div class='block block-strong'><button onclick='' class='col button button-fill color-red open-toast-bottom open-confirm'>Pay</button></div>"
 
             document.getElementById('bill').innerHTML = cartdata
-            document.getElementById('numBill').innerHTML = bname.length
             clearCart();
         }
 
