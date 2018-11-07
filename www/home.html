@@ -44,12 +44,12 @@
                     <div class="navbar">
                         <div class="navbar-inner sliding">
                             <div class="title">Trúc Xinh</div>
-                           
+
                         </div>
                     </div>
                     <div class="page-content">
                         <div class="block-title">Wifi</div>
-                        <div class="list links-list">                           
+                        <div class="list links-list">
                             <ul>
                                 <li>
                                     <div style="padding: 0px 42px 0px 16px; height: 36px;">Tên Wifi : Trucxinh</div>
@@ -135,6 +135,13 @@
                             </a>
 
                         </div>
+                        <div class="right">
+                            <a href="#" class="link icon-only popup-open" data-panel="right" data-popup=".popup-Bill">
+                                <i class="icon material-icons md-only"><i class="fa fa-credit-card" aria-hidden="true"></i><span
+                                        id="numCart" class="badge color-red">0</span></i>
+                            </a>
+
+                        </div>
                     </div>
                 </div>
                 <!-- Toolbar-->
@@ -174,7 +181,7 @@
                                                 <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
                                                     chú</a>
                                                 <br>
-                                                <small id="price">45.000 vnđ</small>
+                                                45.000 vnđ
                                                 <small style="color: green;margin-left: 40%"><i>Còn hàng</i></small>
                                             </div>
 
@@ -182,9 +189,9 @@
 
                                             <div class="item-subtitle">
                                                 <div>
-                                                    <button style="width:50px;height:35px;border-radius: 3px" class="col button open-toast-bottom"
+                                                    <button style="width:55%" class="col button button-fill color-red open-toast-bottom"
                                                         onclick="addItem('img/thit3.jpg','Ba rọi hầm tiêu',45000)">
-                                                        <i style="width:100%" class="fas fa-plus-square"></i>
+                                                        THÊM MÓN
                                                     </button>
                                                 </div>
 
@@ -204,7 +211,7 @@
                                                 <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
                                                     chú</a>
                                                 <br>
-                                                <small>44.000 vnđ</small>
+                                                44.000 vnđ
                                                 <small style="color: green;margin-left: 40%"><i>Còn hàng</i></small>
 
                                             </div>
@@ -212,8 +219,8 @@
 
                                             <div class="item-subtitle">
 
-                                                <button style="width:60%" onclick="addItem('img/thit2.jpg','Sườn non nướng',45000)" class="col button button-fill color-red open-toast-bottom"
-                                                    id="monNuong">Thêm
+                                                <button style="width:55%" onclick="addItem('img/thit2.jpg','Sườn non nướng',45000)"
+                                                    class="col button button-fill color-red open-toast-bottom" id="monNuong">Thêm
                                                     món</button>
                                             </div>
                                         </div>
@@ -230,14 +237,15 @@
                                                 <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
                                                     chú</a>
                                                 <br>
-                                                <small>43.000 vnđ</small>
+                                                43.000 vnđ
                                                 <small style="color: green;margin-left: 40%"><i>Còn hàng</i></small>
                                             </div>
 
 
                                             <div class="item-subtitle">
 
-                                                <button style="width:60%" onclick="addItem('img/thit1.jpg','Bò nướng lu',45000)" class="col button button-fill color-red">Thêm
+                                                <button style="width:55%" onclick="addItem('img/thit1.jpg','Bò nướng lu',45000)"
+                                                    class="col button button-fill color-red">Thêm
                                                     món</button>
                                             </div>
                                         </div>
@@ -254,12 +262,13 @@
                                                 <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
                                                     chú</a>
                                                 <br>
-                                                <small>42.000 vnđ</small>
+                                                42.000 vnđ
                                                 <small style="color: green;margin-left: 40%"><i>Còn hàng</i></small>
                                             </div>
                                             <div class="item-subtitle">
 
-                                                <button style="width:60%" onclick="addItem('img/garan.jpg','Gà cay phô mai',45000)" class="col button button-fill color-red">Thêm
+                                                <button style="width:55%" onclick="addItem('img/garan.jpg','Gà cay phô mai',45000)"
+                                                    class="col button button-fill color-red">Thêm
                                                     món</button>
                                             </div>
                                         </div>
@@ -284,7 +293,7 @@
                                                 <a class="link popover-open" href="#" data-popover=".popover-note">Ghi
                                                     chú</a>
                                                 <br>
-                                                <small>45.000 vnđ</small>
+                                                45.000vnđ
                                                 <small style="color: green;margin-left: 35%"><i>Còn hàng</i></small>
                                             </div>
                                             <div class="item-subtitle">
@@ -310,7 +319,8 @@
                                             </div>
                                             <div class="item-subtitle">
 
-                                                <button style="width:60%" class="col button button-fill color-red" id="monChien">Thêm món</button>
+                                                <button style="width:60%" class="col button button-fill color-red" id="monChien">Thêm
+                                                    món</button>
                                             </div>
                                         </div>
                                     </div>
@@ -655,94 +665,35 @@
         </div>
         <div class="block" id='nhulin'>
 
-            <div class="list media-list" id="cart">
+            <div class="list media-list cart" id="cart">
+                <div class="row" style="position: fixed;z-index: 9999;margin-top: 90%;margin-left: 20%">
 
-                <div class='item-content'>
-                    <div class='item-media'>
-                        <h2>Total</h2>
-                    </div>
-                    <div class='item'>
-                        <div class='item-title-row'>
-                            <div class='item-after'>
-                                <h2>0 Vnđ</h2>
+
+                    <div class='item-content'>
+                        <div class='item-media' style="margin-right: 40%">
+                            <h2>Total</h2>
+                        </div>
+                        <div class='item'>
+                            <div class='item-title-row'>
+                                <div class='item-after'>
+                                    <h2>0 Vnđ</h2>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <button class='col button button-fill color-red open-confirm'>order</button>
-
-
-            </div>
-
-
-        </div>
-    </div>
-
-    <div class="popup popup-monNuong">
-        <div class="navbar">
-            <div class="navbar-inner">
-                <div class="title">Món Nướng</div>
-                <div class="right"><a href="#" class="link popup-close"><i class="fas fa-times-circle"></i></a></div>
-            </div>
-            <div>
-
-            </div>
-        </div>
-        <div class="block">
-
-            <div class="list media-list">
-
-            </div>
-
-
-        </div>
-    </div>
-
-    <div class="popup popup-monHap">
-        <div class="navbar">
-            <div class="navbar-inner">
-                <div class="title">Món Hấp</div>
-                <div class="right"><a href="#" class="link popup-close"><i class="fas fa-times-circle"></i></a></div>
-            </div>
-            <div>
-
-            </div>
-        </div>
-        <div class="block">
-
-            <div class="list media-list">
-
-                <button  class="col button button-fill color-red open-toast-bottom open-confirm" onclick="addItem('img/thit3.jpg','Ba rọi hầm tiêu',45000)">
-                    Thêm
-                    món
-                </button>
-                <div class='item-content'>
-                    <div class='item-media'>
-                        <h2>Total</h2>
-                    </div>
-                    <div class='item'>
-                        <div class='item-title-row'>
-                            <div class='item-after'>
-                                <h2>" +
-                                    total + "vnđ</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <button class='col button button-fill color-red open-toast-bottom open-confirm'>order</button>
+                    <button class='col button button-fill color-red open-confirm'>order</button>
                 </div>
 
-
-
             </div>
 
 
         </div>
     </div>
 
-    <div class="popup popup-monChien">
+    <div class="popup popup-Bill">
         <div class="navbar">
             <div class="navbar-inner">
-                <div class="title">Món Chiên</div>
+                <div class="title">Bill</div>
                 <div class="right"><a href="#" class="link popup-close"><i class="fas fa-times-circle"></i></a></div>
             </div>
             <div>
@@ -751,7 +702,7 @@
         </div>
         <div class="block">
 
-            <div class="list media-list">
+            <div class="list media-list" id="bill">
 
             </div>
 
@@ -759,25 +710,7 @@
         </div>
     </div>
 
-    <div class="popup popup-doUong">
-        <div class="navbar">
-            <div class="navbar-inner">
-                <div class="title">Món Chiên</div>
-                <div class="right"><a href="#" class="link popup-close"><i class="fas fa-times-circle"></i></a></div>
-            </div>
-            <div>
 
-            </div>
-        </div>
-        <div class="block">
-
-            <div class="list media-list">
-
-            </div>
-
-
-        </div>
-    </div>
 
 
     <!-- Cordova -->
@@ -803,21 +736,16 @@
         iprice = [];
         image = [];
         qtt = [];
-        order = "<div class='item-content'>\
-                    <div class='item-media'>\
-                        <h2>Total</h2>\
-                    </div>\
-                    <div class='item'>\
-                        <div class='item-title-row'>\
-                            <div class='item-after'>\
-                                <h2>0 Vnđ</h2>\
-                            </div>\
-                        </div>\
-                    </div>\
-                </div>\
-                <button class='col button button-fill color-red open-toast-bottom open-confirm'>order</button>";
+
+        bname = [];
+        bquantity = [];
+        bprice = [];
+        bimage = [];
+        bqtt = [];
+
 
         function addItem(a, b, d) {
+
             for (var i = 0; i < iname.length; i++) {
                 if (iname[i] == b) {
                     iquantity[i] = iquantity[i] + 1;
@@ -876,7 +804,7 @@
             </li>"
             }
             cartdata += "</ul><div class='item-content'><div class='item-media'><h2>Total</h2></div><div class='item'><div class='item-title-row'> <div class='item-after'><h2>" +
-                total + "vnđ</h2></div></div></div></div> <div class='block block-strong'><button onclick='refreshPage()' class='col button button-fill color-red open-toast-bottom open-confirm'>order</button></div>"
+                total + "vnđ</h2></div></div></div></div> <div class='block block-strong'><button onclick='addToBill()' class='col button button-fill color-red open-toast-bottom open-confirm'>order</button></div>"
 
             document.getElementById('cart').innerHTML = cartdata
             document.getElementById('numCart').innerHTML = iname.length
@@ -892,39 +820,78 @@
             displayCart()
         }
 
-        function refreshPage() {
+        function addToBill() {
+
+            for (var i = 0; i < bname.length; i++) {
+                if (bname[i] == iname[i]) {
+                    bquantity[i] = iquantity[i] + bquantity[i];
+                    bprice[i] += iprice[i];
+                    displayBill();
+                    return;
+                }
+            }
+
+            for (let i = 0; i < iname.length; i++) {
+                bimage.push(image[i]);
+                bname.push(iname[i]);
+                bquantity.push(iquantity[i]);
+                bprice.push(iprice[i]);
+            }
+            displayBill();
+        }
+        function clearCart() {
+            iname = [];
+            iquantity = [];
+            iprice = [];
+            image = [];
+            qtt = [];
+        }
+
+        function displayBill() {
+
+            cartdata = "<ul>";
             total = 0;
-            document.getElementById('cart').innerHTML = "\
-                <div class='item-content'>\
-                    <div class='item-media'>\
-                        <h2>Total</h2>\
-                    </div>\
-                    <div class='item'>\
-                        <div class='item-title-row'>\
-                            <div class='item-after'>\
-                                <h2>0 Vnđ</h2>\
-                            </div>\
-                        </div>\
-                    </div>\
+            tmp = '"'
+            vnd = 'vnđ'
+
+            for (let i = 0; i < bname.length; i++) {
+                total += bprice[i];
+                cartdata +=
+                    "<li>\
+              <div class='item-content'>\
+                <div class='item-media'>\
+                  <img src=" + tmp + bimage[i] + tmp + "width='100px' height='100px'/>\
                 </div>\
-                <button class='col button button-fill color-red open-toast-bottom open-confirm'>order</button>";
+                <div class='item-inner'>\
+                  <div class='item-title-row'>\
+                    <div class='item-title'>" + bname[i] + "</div>\
+                    <div class='item-after'>" + bprice[i] + vnd + "</div>\
+                  </div>\
+                <div class='item-text'>\
+                  <div class='row'>\
+                    <div class='col-50'> Số lượng: </div>\
+                    <div class='col-50'>" + bquantity[i] + "</div>\
+                  </div>\
+                </div>\
+                <div class='row margin-top'>\
+                    <button class='button button-fill color-orange' style='width:55px;height:33px' onclick='delElement(" + i + ")'>\
+                      <i class='fas fa-trash-alt'></i>\
+                    </button>\
+                    <button onclick='updateQuantitive()' class='button button-fill color-green' style='float:right;width:105px;height:33px'>\
+                      Update\
+                    </button>\
+                  </div>\
+              </div>\
+            </li>"
+            }
+            cartdata += "</ul><div class='item-content'><div class='item-media'><h2>Total</h2></div><div class='item'><div class='item-title-row'> <div class='item-after'><h2>" +
+                total + "vnđ</h2></div></div></div></div> <div class='block block-strong'><button onclick='' class='col button button-fill color-red open-toast-bottom open-confirm'>Pay</button></div>"
 
-            document.getElementById('numCart').innerHTML = 0;
-
+            document.getElementById('bill').innerHTML = cartdata
+            document.getElementById('numCart').innerHTML = bname.length
+            clearCart();
         }
 
-        function focusCategories1() {
-            document.getElementById('monNuong').focus();
-        }
-        function focusCategories2() {
-            document.getElementById('monHap').focus();
-        }
-        function focusCategories3() {
-            document.getElementById('monChien').focus();
-        }
-        function focusCategories4() {
-            document.getElementById('doUong').focus();
-        }
 
     </script>
 
