@@ -664,30 +664,64 @@
 
             </div>
         </div>
-        <div class="block" id='nhulin'>
-
-            <div class="list media-list cart" id="cart">
-                <div class="row" style="position: fixed;z-index: 9999;margin-top: 90%;margin-left: 20%">
-
-
-                    <div class='item-content'>
-                        <div class='item-media' style="margin-right: 40%">
-                            <h2>Total</h2>
-                        </div>
-                        <div class='item'>
-                            <div class='item-title-row'>
-                                <div class='item-after'>
-                                    <h2>0 Vnđ</h2>
+        <div class="row" style="position: relative;padding: 0 5px 0 5px; margin: 0">
+            <div style="width:45%;">
+                <h4>Your Table: </h4>
+            </div>
+            <div style="width:45%; text-align: end">
+                <h4>0 VND</h4>
+            </div>
+        </div>
+        <div class="block" id='nhulin' style="margin: 0px;padding: 0px;">
+            <div class="list media-list cart" style="width: 100%;overflow: scroll;height: 400px;padding-bottom: 15%;margin-top: 0px;">
+                <ul id="cart">
+                    <li>
+                        <div class='item-content'>
+                            <div class='item-media'>
+                                <img src=" + tmp + image[i] + tmp + " width='100px' height='100px' />
+                            </div>
+                            <div class='item-inner'>
+                                <div class='item-title-row'>
+                                    <div class='item-title'> iname[i] </div>
+                                    <div class='item-after'> iprice[i]</div>
+                                </div>
+                                <div class='row' style='margin-top: 17%'>
+                                    <div class='stepper stepper-fill stepper-round'>
+                                        <div class='stepper-button-minus' onclick='minus(1)'></div>
+                                        <!-- Stepper value element -->
+                                        <div class='stepper-value' id='quantity_1'>10</div>
+                                        <div class='stepper-button-plus' onclick='plus(1)'></div>
+                                    </div>
+                                    <button class='
+                                            button button-fill color-red'
+                                        style='width:55px;height:35px' onclick='delElement(" + i + ")'>
+                                        <i class='fas fa-trash-alt'></i>
+                                    </button>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <button class='col button button-fill color-red open-confirm'>order</button>
-                </div>
+                    </li>
+                </ul>
 
             </div>
-
-
+            <div style="width: 100%; position: fixed;z-index: 9999;bottom: 0;transform: translateX;">
+                <div class="item-media row" style="position: relative;background: aliceblue;padding: 0 5px 0 5px;">
+                    <div style="width:45%;">
+                        <h3>Total:</h3>
+                    </div>
+                    <div style="width:45%; text-align: end">
+                        <h3 id="toTal">0 VND</h3>
+                    </div>
+                </div>
+                <!-- <div class="item">
+                        <div class="item-title-row"> 
+                           <div class="item-after" style=" position: relative; right: -150%;">
+                                <h2>0 Vnđ</h2> 
+                            </div> 
+                         </div>
+                    </div> -->
+                <button class="col button button-fill color-red open-confirm">order</button>
+            </div>
         </div>
     </div>
 
@@ -702,12 +736,8 @@
             </div>
         </div>
         <div class="block">
-
             <div class="list media-list" id="bill">
-
             </div>
-
-
         </div>
     </div>
 
@@ -750,7 +780,7 @@
             for (var i = 0; i < iname.length; i++) {
                 if (iname[i] == b) {
                     iquantity[i] = iquantity[i] + 1;
-                    iprice[i] += d;
+                    //iprice[i] = iquantity[i]*d;
                     displayCart();
                     return;
                 }
@@ -769,46 +799,55 @@
         }
 
         function displayCart() {
-            cartdata = "<ul>";
+            cartdata = "";
             total = 0;
             tmp = '"'
             vnd = 'vnđ'
 
             for (let i = 0; i < iname.length; i++) {
-                total += iprice[i];
+                console.log("before" + iquantity[i]);
                 cartdata +=
-                    "<li>\
-              <div class='item-content'>\
-                <div class='item-media'>\
-                  <img src=" + tmp + image[i] + tmp + "width='100px' height='100px'/>\
-                </div>\
-                <div class='item-inner'>\
-                  <div class='item-title-row'>\
-                    <div class='item-title'>" + iname[i] + "</div>\
-                    <div class='item-after'>" + iprice[i] + vnd + "</div>\
-                  </div>\
-                <div class='item-text'>\
-                  <div class='row'>\
-                    <div class='col-50'> Số lượng: </div>\
-                    <div class='col-50'>" + iquantity[i] + "</div>\
-                  </div>\
-                </div>\
-                <div class='row margin-top'>\
-                    <button class='button button-fill color-orange' style='width:55px;height:33px' onclick='delElement(" + i + ")'>\
-                      <i class='fas fa-trash-alt'></i>\
-                    </button>\
-                    <button onclick='updateQuantitive()' class='button button-fill color-green' style='float:right;width:105px;height:33px'>\
-                      Update\
-                    </button>\
-                  </div>\
-              </div>\
-            </li>"
+                    "    <li>\
+                        <div class='item-content'>\
+                            <div class='item-media'>\
+                                <img src=" + tmp + image[i] + tmp + " width='100px' height='100px' />\
+                            </div>\
+                            <div class='item-inner'>\
+                                <div class='item-title-row'>\
+                                    <div class='item-title'>"+ iname[i] + " </div>\
+                                    <div class='item-after'>"+ (iprice[i]*iquantity[i]).toLocaleString('it-IT', { style: 'currency', currency: 'VND' }) + "</div>\
+                                </div>\
+                                <div class='row' style='margin-top: 17%'>\
+                                    <div class='stepper stepper-fill stepper-round'>\
+                                        <div class='stepper-button-minus' onclick='minus("+ i + ")'></div>\
+                                        <!-- Stepper value element -->\
+                                        <div class='stepper-value' id='quantity_"+ i + "'>" + iquantity[i] + "</div>\
+                                        <div class='stepper-button-plus' onclick='plus("+ i + ")'></div>\
+                                    </div>\
+                                    <button class=' button button-fill color-red' style='width:55px;height:35px' onclick='delElement(" + i + ")'>\
+                                            <i class='fas fa-trash-alt'></i>\
+                                    </button>\
+                              </div>\
+                            </div>\
+                       </div>\
+                    </li>"
+                console.log("after" + iquantity[i]);
+                total += iquantity[i] * iprice[i];
+
             }
-            cartdata += "</ul><div class='item-content'><div class='item-media'><h2>Total</h2></div><div class='item'><div class='item-title-row'> <div class='item-after'><h2>" +
-                total + "vnđ</h2></div></div></div></div> <div class='block block-strong'><button onclick='addToBill()' class='col button button-fill color-red open-toast-bottom open-confirm'>order</button></div>"
+
+
+
+            // cartdata += "</ul><div class='item-content'><div class='item-media'><h2>Total</h2></div><div class='item'><div class='item-title-row'> <div class='item-after'><h2>" +
+            //     total + "vnđ</h2></div></div></div></div> <div class='block block-strong'><button onclick='addToBill()' class='col button button-fill color-red open-toast-bottom open-confirm'>order</button></div>"
 
             document.getElementById('cart').innerHTML = cartdata
             document.getElementById('numCart').innerHTML = iname.length
+            total.toLocaleString('it-IT', { style: 'currency', currency: 'VND' });
+
+            var x = total;
+            x = x.toLocaleString('it-IT', { style: 'currency', currency: 'VND' });
+            document.getElementById('toTal').innerHTML = x;
 
         }
 
@@ -816,7 +855,7 @@
             iname.splice(a, 1)
             iquantity.splice(a, 1)
             iprice.splice(a, 1)
-            sl = 1
+
             document.getElementById('numCart').innerHTML = iname.length;
             displayCart()
         }
@@ -826,15 +865,15 @@
             for (var i = 0; i < bname.length; i++) {
                 for (let j = 0; j < iname.length; j++) {
                     if (bname[i] == iname[j]) {
-                    bquantity[i] += iquantity[j];
-                    bprice[i] += iprice[j];
-               
-                    displayBill();
-                    return;
+                        bquantity[i] += iquantity[j];
+                        bprice[i] += iprice[j];
+
+                        displayBill();
+                        return;
+                    }
+
                 }
-                    
-                }
-                
+
             }
 
             for (let i = 0; i < iname.length; i++) {
@@ -843,7 +882,7 @@
                 bquantity.push(iquantity[i]);
                 bprice.push(iprice[i]);
             }
-       
+
             displayBill();
         }
         function clearCart() {
@@ -859,9 +898,10 @@
         function displayBill() {
 
             cartdata = "<ul>";
-            total = 0;
+
             tmp = '"'
             vnd = 'vnđ'
+            console.log();
 
             for (let i = 0; i < bname.length; i++) {
                 total += bprice[i];
@@ -898,6 +938,29 @@
 
             document.getElementById('bill').innerHTML = cartdata
             clearCart();
+        }
+
+        function plus(position) {
+            let qtt = parseInt(document.getElementById('quantity_' + position).innerHTML);
+            qtt += 1;
+
+            iquantity[position] = qtt;
+            console.log(iquantity[position])
+
+            document.getElementById('quantity_' + position).innerHTML = qtt;
+            displayCart();
+
+        }
+
+        function minus(position) {
+            let qtt = parseInt(document.getElementById('quantity_' + position).innerHTML);
+            qtt -= 1;
+            if (qtt < 0) {
+                qtt = 0;
+            }
+            iquantity[position] = qtt;
+            document.getElementById('quantity_' + position).innerHTML = qtt;
+            displayCart();
         }
 
 

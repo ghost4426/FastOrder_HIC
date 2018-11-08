@@ -41,14 +41,7 @@ var searchbar = app.searchbar.create({
   }
 });
 
-var stepper = app.stepper.create({
-  el: '.stepper',
-  on: {
-    change: function () {
-      console.log('Stepper value changed')
-    }
-  }
-});
+
 
 // Init/Create left panel view
 // var mainView = app.views.create('.view-left', {
